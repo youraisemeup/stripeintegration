@@ -1,0 +1,4920 @@
+/*******************************************************************************
+
+[TABLE OF CONTENTS]
+
++ Reset styles
++ Base
++ Default
++ Font
++ Color
+	+ Color / Text
+	+ Color / Background
+	+ Color / Border
+	+ Color / White section
++ Background Image
++ Layout
+	+ Layout / Flex
+	+ Layout / 100
+	+ Layout / 50x50
+	+ Layout / 33x33x33
+	+ Layout / 25x25x25x25
+	+ Layout / 66x33
+	+ Layout / 33x66
++ Template layout
++ Header
++ Form
+	+ Form / Form field
++ Logo
++ Icon
+	+ Icon / Feature
+	+ Icon / Social
+	+ Icon / Meta
+	+ Icon / Vehicle
+	+ Icon / Booking meta
++ Template
+	+ Template	/ Header
+	+ Template	/ Header / Top
+		+ Template	/ Header / Top / Logo
+			+ Template	/ Header / Top / Menu
+			+ Template	/ Header / Top / Icon list
+		+ Template	/ Header / Bottom
+			+ Template	/ Header / Bottom / Page title
+			+ Template	/ Header / Bottom / Breadcrumb
+	+ Template / Content
+		+ Template / Footer
+			+ Template / Footer / Top
+			+ Template / Footer / Bottom
++ Flexnav
++ Blog
+	+ Blog / Header
+		+ Blog / Header / Date
+		+ Blog / Header / Header
+		+ Blog / Header / Meta
+		+ Blog / Header / Header
+		+ Blog / Header / Meta
+	+ Blog / Image
+	+ Blog / Excerpt
+	+ Blog / Content
+	+ Blog / Author info
+	+ Blog / Meta
+	+ Blog / Comment form
+	+ Blog / Comment List
++ Widget list
+	+ Widget list / Search
+	+ Widget list / Text
+	+ Widget list / Service
+	+ Widget list / Archive
+	+ Widget list / Category
+	+ Widget list / Tag
+	+ Widget list / Latest post
++ Pagination
++ Qtip
++ Fancybox
++ Datetime picker
++ Revolution slider
++ Button animation
++ Component
+	+ Component / Accordion
+		+ Component / Accordion / Header
+		+ Component / Accordion / Content
+	+ Component / Announcement
+	+ Component / Blockquote
+	+ Component / Booking
+		+ Component / Booking / Form
+		+ Component / Booking / Item
+			+ Component / Booking / Item / Header
+			+ Component / Booking / Item / Content
+		+ Component / Booking / Vehicle list
+		+ Component / Booking / Package list
+		+ Component / Booking / Service list
+		+ Component / Booking / Summary
+	+ Component / Button
+	+ Component / Call to action
+	+ Component / Contact form
+	+ Component / Comment form
+	+ Component / Counter bar list
+	+ Component / Counter box list
+	+ Component / Divider
+	+ Component / Feature list
+		+ Component / Feature list / Top
+		+ Component / Feature list / Right
+		+ Component / Feature list / Left
+	+ Component / Gallery
+		+ Component / Gallery / Filter list
+		+ Component / Gallery / Image list
+	+ Component / Go to top
+	+ Component / Google maps
+	+ Component / Header + subheader
+	+ Component / Image
+	+ Component / Italics
+	+ Component / List
+	+ Component / Menu
+		+ Component / Menu / Default
+		+ Component / Menu / Responsive
+	+ Component / More link
+	+ Component / Process list
+	+ Component / Recent post
+	+ Component / Tab
+		+ Component / Tab / Navigation
+		+ Component / Tab / Panel
+	+ Component / Team list
+	+ Component / Search form
+	+ Component / Space
+	+ Component / Social icon list
+		+ Component / Social icon list / Style 1
+		+ Component / Social icon list / Style 2
+		+ Component / Social icon list / Style 3
++ Component / Testimonial
++ Page
++ Page / 404
+
+*******************************************************************************/
+
+/******************************************************************************/
+/* Reset styles																  */
+/******************************************************************************/
+
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,embed,
+figure,figcaption,footer,header,hgroup,
+menu,nav,output,ruby,section,summary,
+time,mark,audio,video
+{
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	vertical-align:baseline;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menua,nav,section
+{
+	display:block;
+}
+
+ol,ul
+{
+	list-style:none;
+}
+
+blockquote,q
+{
+	quotes:none;
+}
+
+blockquote:before,blockquote:after,
+q:before,q:after
+{
+	content:'';
+	content:none;
+}
+
+table
+{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+:focus
+{
+	outline:none;
+}
+
+::-moz-focus-inner
+{
+	border:0;
+}
+
+/******************************************************************************/
+/* Base																		  */
+/******************************************************************************/
+
+*
+{
+	outline:none;
+	line-height:186%;
+	box-sizing:border-box;
+}
+
+*:focus,a,textarea,input
+{
+    outline:none;
+}
+
+html,body,input,textarea
+{
+	font-size:15px;
+	font-weight:400;
+	font-family:'Lato';
+	box-sizing:border-box;
+}
+
+img
+{
+	display:block;
+	max-width:100%;
+	height:auto;
+}
+
+p
+{
+	padding:10px 0px 10px 0px;
+}
+
+a
+{
+	text-decoration:none;
+}
+
+a:hover
+{
+	text-decoration:underline;
+}
+
+textarea
+{
+	overflow:hidden;
+}
+
+/******************************************************************************/
+/* Default																	  */
+/******************************************************************************/
+
+.template-main
+{
+	width:1170px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.template-list-reset
+{
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+
+.template-clear-fix:after
+{
+	height:0;
+	clear:both;
+	content:" ";
+	font-size:0;
+	min-height:0;
+	display:block;
+	visibility:hidden;
+}
+
+* html .template-clear-fix														{	zoom: 1;						}
+*:first-child+html .template-clear-fix											{	zoom: 1;						}
+
+.template-state-hidden
+{
+	display:none !important;
+}
+
+.template-state-block
+{
+	display:inline-block;
+}
+
+.template-align-left															{	text-align:left !important;		}
+.template-align-right															{	text-align:right !important;	}
+.template-align-center															{	text-align:center !important;	}
+
+.template-padding-reset															{	padding:0px !important;			}
+.template-padding-top-reset														{	padding-top:0px !important;		}
+
+.template-margin-top-1															{	margin-top:60px !important;		}
+.template-margin-top-2															{	margin-top:30px !important;		}
+.template-margin-top-reset														{	margin-top:0px !important;		}
+
+.template-margin-bottom-1														{	margin-bottom:60px !important;	}
+.template-margin-bottom-2														{	margin-bottom:30px !important;	}
+.template-margin-bottom-reset													{	margin-bottom:0px !important;	}
+
+/******************************************************************************/
+/* Font																	  */
+/******************************************************************************/
+
+body,*,input,textarea
+{
+	font-family:"Lato";
+}
+
+.template-component-blockquote,
+.template-component-booking .template-component-booking-item-header>h5,
+.template-component-header-subheader span,
+.template-component-italic,
+.template-component-testimonial-list ul>li>p,
+.template-component-testimonial-list ul>li>span,
+.template-component-team-list>ul>li>.template-component-team-list-position
+{
+	font-family:"PT Serif";
+}
+
+/******************************************************************************/
+/* Color																	  */
+/******************************************************************************/
+
+	/**************************************************************************/
+	/* Color / Text															  */
+	/**************************************************************************/
+
+	h1,
+	body>.template-component-search-form span,
+	body>.template-component-search-form input,
+	.template-qtip.qtip,
+	.template-header .template-header-bottom,
+	.template-header .template-header-bottom a,
+	.template-header .template-header-top .template-component-menu-default>.sf-menu>li ul li a:hover,
+	.template-header .template-header-top .template-component-menu-default>.sf-menu>li ul li a.template-state-selected,
+	.template-header .template-header-bottom .template-header-bottom-page-breadcrumb span,
+	.template-header .template-header-top .template-header-top-icon-list a:hover,
+	.template-header .template-header-top .template-component-menu-default>.sf-menu>li>a:hover,
+	.template-header .template-header-top .template-component-menu-default>.sf-menu>li>a.template-state-selected,
+	.template-footer h6,
+	.template-footer input,
+	.template-footer a:hover,
+	.template-footer .template-footer-bottom .template-social-icon-list a,
+	.template-footer .template-component-button,
+	.template-widget-tag li a:hover,
+	.template-pagination>ul>li:hover,
+	.template-pagination>ul>li:hover>a,
+	.template-pagination>ul>li.template-pagination-button-selected,
+	.template-pagination>ul>li.template-pagination-button-selected>a,
+	.template-component-booking .template-component-booking-item-header>span,
+	.template-component-booking .template-component-booking-vehicle-list>li:hover,
+	.template-component-booking .template-component-booking-vehicle-list>li.template-state-selected,
+	.template-component-booking .template-component-booking-package-list>li.template-state-selected>div.template-component-button-box>.template-component-button,
+	.template-component-booking .template-component-booking-service-list>li.template-state-selected>div.template-component-button-box>.template-component-button,
+	.template-component-button:hover,
+	.template-component-gallery .template-component-gallery-filter-list>li>a:hover,
+	.template-component-gallery .template-component-gallery-filter-list>li>a.template-state-selected,
+	.template-component-go-to-top,
+	.template-component-go-to-top:hover,
+	.template-component-image .template-component-image-hover>span>span>span,
+	.template-component-social-icon-list.template-component-social-icon-list-3 li a:hover,
+	.template-component-tab.ui-tabs .ui-tabs-nav li.ui-state-default.ui-state-hover a,
+	.template-component-tab.ui-tabs .ui-tabs-nav li.ui-state-default.ui-state-active a,
+	.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-left:hover,
+	.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-right:hover,
+	.tparrows.preview1::after,
+	.dtpicker-buttonCont .dtpicker-button:hover
+	{
+		color:#FFFFFF;
+	}
+
+	::-moz-selection
+	{
+		color:#FFFFFF;
+	}
+
+	.template-header .template-header-top.template-header-top-sticky .template-header-top-icon-list a,
+	.template-header .template-header-top.template-header-top-static .template-header-top-icon-list a,
+	.template-footer,
+	.template-footer a,
+	.template-footer .template-footer-bottom .template-social-icon-list a:hover,
+	.template-blog .template-blog-header .template-blog-header-meta span,
+	.template-blog .template-blog-header .template-blog-header-meta span a,
+	.template-blog .template-blog-header .template-blog-header-date span,
+	.template-blog .template-blog-author-info span,
+	.template-blog .template-blog-meta,
+	.template-blog .template-blog-meta span,
+	.template-blog .template-blog-meta>div>div+div a,
+	.template-blog-comment-list ul>li>div>span,
+	.template-widget-service ul li a,
+	.template-widget-archive ul li a,
+	.template-widget-category ul li a,
+	.template-widget-tag li a,
+	.template-widget-latest-post ul li a span+span,
+	.template-widget-most-comment ul li a span+span,
+	.template-pagination>ul>li a,
+	.template-component-accordion.ui-accordion .ui-accordion-header span,
+	.template-component-booking .template-component-booking-item-header>h5,
+	.template-component-booking .template-component-booking-vehicle-list>li,
+	.template-component-booking .template-component-booking-package-list>li>.template-component-booking-package-duration,
+	.template-component-booking .template-component-booking-service-list>li>div.template-component-booking-service-price,
+	.template-component-booking .template-component-booking-service-list>li>div.template-component-booking-service-duration,
+	.template-component-booking .template-component-booking-summary>li>span,
+	.template-component-counter-bar-list>ul>li>span,
+	.template-component-counter-box-list>ul>li>span,
+	.template-component-form-field label,
+	.template-component-gallery .template-component-gallery-filter-list>li>a,
+	.template-component-google-map .template-component-google-map-button,
+	.template-component-menu-default>.sf-menu>li ul li a,
+	.template-component-social-icon-list.template-component-social-icon-list-3 li a,
+	.template-component-testimonial-list ul>li>span,
+	.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-left,
+	.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-right,
+	.flexnav .touch-button.template-icon-meta-arrow-large-tb:before,
+	.fancybox-title.fancybox-title-inside-wrap
+	{
+		color:#A8B1B6;
+	}
+
+	.template-header .template-header-top .template-header-top-icon-list a,
+	.template-header .template-header-top .template-component-menu-default>.sf-menu>li>a
+	{
+		color:rgba(255,255,255,0.85);
+	}
+
+	body,
+	input,
+	textarea,
+	.template-header .template-header-top.template-header-top-sticky .template-component-menu-default>.sf-menu>li>a,
+	.template-header .template-header-top.template-header-top-static .template-component-menu-default>.sf-menu>li>a,
+	.template-widget-latest-post ul li a,
+	.template-widget-most-comment ul li a,
+	.template-component-booking .template-component-booking-package-list>li>.template-component-booking-package-service-list>li,
+	.template-component-booking .template-component-booking-service-list>li>div.template-component-booking-service-name .template-component-more-content,
+	.template-component-testimonial-list ul>li>p,
+	.flexnav li a,
+	.tparrows.preview1:hover::after,
+	.dtpicker-header .dtpicker-title,
+	.dtpicker-header .dtpicker-value,
+	.dtpicker-components .dtpicker-comp>*,
+	.dtpicker-overlay .dtpicker-compValue:focus,
+	.dtpicker-overlay .dtpicker-compValue:hover,
+	.dtpicker-buttonCont .dtpicker-button
+	{
+		color:#777777;
+	}
+
+	.template-header .template-header-top.template-header-top-sticky .template-header-top-icon-list a:hover,
+	.template-header .template-header-top.template-header-top-sticky .template-component-menu-default>.sf-menu>li>a:hover,
+	.template-header .template-header-top.template-header-top-sticky .template-component-menu-default>.sf-menu>li>a.template-state-selected,
+	.template-header .template-header-top.template-header-top-sticky .template-header-top-icon-list .template-icon-meta-menu:hover:before,
+	.template-header .template-header-top.template-header-top-static .template-header-top-icon-list a:hover,
+	.template-header .template-header-top.template-header-top-static .template-component-menu-default>.sf-menu>li>a:hover,
+	.template-header .template-header-top.template-header-top-static .template-component-menu-default>.sf-menu>li>a.template-state-selected,
+	.template-header .template-header-top.template-header-top-static .template-header-top-icon-list .template-icon-meta-menu:hover:before,
+	.template-blog .template-blog-header .template-blog-header-date span:first-child+span,
+	.template-widget-service ul li a:hover,
+	.template-widget-archive ul li a:hover,
+	.template-widget-category ul li a:hover,
+	.template-component-booking .template-component-booking-package-list>li>.template-component-booking-package-price,
+	.template-component-booking .template-component-booking-summary>li>h5,
+	.template-component-booking .template-component-booking-summary>li>div,
+	.template-component-button,
+	.template-component-header-subheader span,
+	.template-component-italic,
+	.template-component-team-list>ul>li>.template-component-team-list-position,
+	.flexnav li a:hover,
+	.flexnav li a.template-state-selected,
+	.flexnav .touch-button.template-icon-meta-arrow-large-tb:hover:before,
+	[class^="template-icon-feature-"],[class*=" template-icon-feature-"]
+	{
+		color:#d6242f;
+	}
+
+	h2,h3,h4,h5,h6,
+	h2 a,h3 a,h4 a,h5 a,h6 a,
+	h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover,
+	.template-header .template-header-top.template-header-top-sticky .template-header-top-icon-list .template-icon-meta-menu:before,
+	.template-header .template-header-top.template-header-top-static .template-header-top-icon-list .template-icon-meta-menu:before,
+	.template-component-accordion.ui-accordion .ui-accordion-header span+span,
+	.template-component-booking .template-component-booking-package-list>li>.template-component-booking-package-name,
+	.template-component-booking .template-component-booking-service-list>li>.template-component-booking-service-name,
+	.template-component-recent-post>li>a>span
+	{
+		color:#222222;
+	}
+
+	a,
+	.template-component-list li>span
+	{
+		color:#d6242f;
+	}
+
+	.template-page-404 .template-content h1
+	{
+		color:#E2E6E7;
+	}
+
+	/**************************************************************************/
+	/* Color / Background													  */
+	/**************************************************************************/
+
+	.template-footer,
+	.template-component-menu-default>.sf-menu>li ul
+	{
+		background-color:#222222;
+	}
+
+	.template-header .template-header-top.template-header-top-sticky,
+	.template-header .template-header-top.template-header-top-static,
+	.template-component-menu-responsive>ul,
+	.rev_slider_wrapper,
+	.flexnav li a,
+	.flexnav li ul li a,
+	.flexnav .touch-button
+	{
+		background-color:#FFFFFF;
+	}
+
+	.template-component-google-map .template-component-google-map-button,
+	.flexnav li.item-with-ul ul a
+	{
+		background-color:#FAFAFA;
+	}
+
+	.template-component-header-subheader>div,
+	.template-component-counter-bar-list>ul>li>div,
+	.template-component-divider
+	{
+		background-color:#E2E6E7;
+	}
+
+	.template-footer .template-component-button:hover,
+	.template-widget-tag li a:hover,
+	.template-pagination>ul>li:hover,
+	.template-pagination>ul>li.template-pagination-button-selected,
+	.template-component-booking .template-component-booking-item-header>span,
+	.template-component-booking .template-component-booking-vehicle-list>li:hover,
+	.template-component-booking .template-component-booking-vehicle-list>li.template-state-selected,
+	.template-component-booking .template-component-booking-package-list>li.template-state-selected>div.template-component-button-box>.template-component-button,
+	.template-component-booking .template-component-booking-service-list>li.template-state-selected>div.template-component-button-box>.template-component-button,
+	.template-component-button:hover,
+	.template-component-counter-bar-list>ul>li>div>div,
+	.template-component-gallery .template-component-gallery-filter-list>li>a:hover,
+	.template-component-gallery .template-component-gallery-filter-list>li>a.template-state-selected,
+	.template-component-go-to-top:hover,
+	.template-component-tab.ui-tabs .ui-tabs-nav li.ui-state-default.ui-state-hover,
+	.template-component-tab.ui-tabs .ui-tabs-nav li.ui-state-default.ui-state-active,
+	.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-left:hover,
+	.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-right:hover,
+	.template-component-social-icon-list.template-component-social-icon-list-3 li a:hover,
+	.dtpicker-components .dtpicker-compButton:hover,
+	.dtpicker-buttonCont .dtpicker-button:hover
+	{
+		background-color:#d6242f;
+	}
+
+	::-moz-selection
+	{
+		background-color:#d6242f;
+	}
+
+	.template-background-color-1,
+	.template-component-blockquote
+	{
+		background-color:#F5F5F5;
+	}
+
+	.template-background-color-2,
+	.dtpicker-overlay .dtpicker-compValue:focus
+	{
+		background-color:#F0F0F0;
+	}
+
+	input
+	{
+		background-color:transparent;
+	}
+
+	body>.template-component-search-form
+	{
+		background-color:#1B1B1B;
+	}
+
+	.template-qtip.template-qtip-success.qtip
+	{
+		background-color:#67CC2A;
+	}
+
+	.template-qtip.template-qtip-error.qtip
+	{
+		background-color:#FF9600;
+	}
+
+	.template-component-go-to-top
+	{
+		background-color:rgba(0,0,0,0.4);
+	}
+
+	.template-component-image .template-component-image-hover
+	{
+		background:rgba(38,47,63,0.3);
+	}
+
+	.template-component-image .template-component-image-hover>span>span>span.template-component-image-hover-divider
+	{
+		background:rgba(255,255,255,0.5);
+	}
+
+	.tparrows.preview1::after,
+	.tp-bullets.preview1 .tp-bullet
+	{
+		background:rgba(0,0,0,0.15);
+	}
+
+	.fancybox-skin
+	{
+		background:#FFFFFF;
+	}
+
+	.tparrows.preview1:hover::after,
+	.tp-bullets.preview1 .tp-bullet:hover,
+	.tp-bullets.preview1 .tp-bullet.selected
+	{
+		background:#FFFFFF !important;
+	}
+
+	.template-component-button,
+	.dtpicker-buttonCont .dtpicker-button
+	{
+		background-color:transparent;
+	}
+
+	/**************************************************************************/
+	/* Color / Border														  */
+	/**************************************************************************/
+
+	.template-footer .template-footer-bottom
+	{
+		border-color:#47484A;
+	}
+
+	.template-header .template-header-top .template-header-top-icon-list .template-icon-meta-menu
+	{
+		border-color:rgba(255,255,255,0.85);
+	}
+
+	.template-header .template-header-top .template-header-top-icon-list .template-icon-meta-menu:hover
+	{
+		border-color:#FFFFFF;
+	}
+
+	input,
+	.template-header .template-header-top.template-header-top-sticky .template-header-top-icon-list .template-icon-meta-menu,
+	.template-header .template-header-top.template-header-top-static .template-header-top-icon-list .template-icon-meta-menu,
+	.template-blog>ul>li,
+	.template-blog .template-blog-header .template-blog-header-date span,
+	.template-blog .template-blog-author-info,
+	.template-blog .template-blog-header .template-blog-header-date,
+	.template-blog .template-blog-header .template-blog-header-date span:first-child+span,
+	.template-blog-comment-list ul>li>div,
+	.template-widget-service ul li a,
+	.template-widget-archive ul li a,
+	.template-widget-category ul li a,
+	.template-widget-tag li a,
+	.template-pagination>ul>li,
+	.template-component-accordion.ui-accordion .ui-accordion-header span,
+	.template-component-announcement,
+	.template-component-booking .template-component-booking-vehicle-list>li,
+	.template-component-booking .template-component-booking-package-list>li,
+	.template-component-booking .template-component-booking-package-list>li>.template-component-booking-package-duration,
+	.template-component-booking .template-component-booking-service-list>li,
+	.template-component-booking .template-component-booking-summary>li,
+	.template-component-form-field,
+	.template-component-gallery .template-component-gallery-filter-list>li>a,
+	.template-component-process-list>ul>li>span,
+	.template-component-recent-post>li>a,
+	.template-component-social-icon-list.template-component-social-icon-list-3 li a,
+	.template-component-tab.ui-tabs .ui-tabs-nav li.ui-state-default,
+	.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-left,
+	.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-right,
+	.flexnav li a,
+	.flexnav .touch-button
+	{
+		border-color:#E2E6E7;
+	}
+
+	.template-footer .template-component-button:hover,
+	.template-widget-tag li a:hover,
+	.template-pagination>ul>li:hover,
+	.template-pagination>ul>li.template-pagination-button-selected,
+	.template-color-white.template-component-button:hover,
+	.template-color-white .template-component-button:hover,
+	.template-component-booking .template-component-booking-vehicle-list>li:hover,
+	.template-component-booking .template-component-booking-vehicle-list>li.template-state-selected,
+	.template-component-button,
+	.template-component-gallery .template-component-gallery-filter-list>li>a:hover,
+	.template-component-gallery .template-component-gallery-filter-list>li>a.template-state-selected,
+	.template-component-social-icon-list.template-component-social-icon-list-3 li a:hover,
+	.template-component-tab.ui-tabs .ui-tabs-nav li.ui-state-default.ui-state-hover,
+	.template-component-tab.ui-tabs .ui-tabs-nav li.ui-state-default.ui-state-active,
+	.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-left:hover,
+	.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-right:hover,
+	.dtpicker-components .dtpicker-compButton:hover,
+	.dtpicker-buttonCont .dtpicker-button:hover
+	{
+		border-color:#d6242f;
+	}
+
+	body>.template-component-search-form input
+	{
+		border-color:rgba(255,255,255,0.3);
+	}
+
+	.template-qtip.template-qtip-success.qtip .qtip-tip
+	{
+		border-color:#67CC2A;
+	}
+
+	.template-qtip.template-qtip-error.qtip .qtip-tip
+	{
+		border-color:#FF9600;
+	}
+
+	.template-footer .template-component-button,
+	.template-footer .template-component-form-field
+	{
+		border-color:#47484A;
+	}
+
+	.dtpicker-components .dtpicker-compButton,
+	.dtpicker-buttonCont .dtpicker-button
+	{
+		border-color:#F1F1F1;
+	}
+
+	/**************************************************************************/
+	/* Color / White section												  */
+	/**************************************************************************/
+
+	.template-color-white,
+	.template-color-white *,
+	.template-color-white .template-component-header-subheader>span,
+	.template-color-white .template-component-recent-post>li>a>span,
+	.template-color-white .template-component-testimonial-list ul>li>p,
+	.template-color-white .template-component-testimonial-list ul>li>span,
+	.template-color-white .template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-left,
+	.template-color-white .template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-right,
+	.dtpicker-components .dtpicker-compButton:hover
+	{
+		color:#FFFFFF;
+	}
+
+	.template-color-white .template-component-process-list>ul>li>span,
+	.template-color-white .template-component-recent-post>li>a
+	{
+		border-color:rgba(255,255,255,0.3);
+	}
+
+	.template-color-white .template-component-recent-post>li>a:hover
+	{
+		border-color:rgba(255,255,255,0.9);
+	}
+
+	.template-color-white.template-component-button,
+	.template-color-white .template-component-button
+	{
+		border-color:#FFFFFF;
+	}
+
+	.template-color-white .template-component-header-subheader>div
+	{
+		background-color:#FFFFFF;
+	}
+
+/******************************************************************************/
+/* Background Image															  */
+/******************************************************************************/
+
+.template-background-image
+{
+	background-size:cover;
+	background-position:center center;
+}
+
+.template-background-image-parallax
+{
+	background-attachment:fixed;
+}
+
+	.template-background-image.template-background-image-1	{	background-image:url('../media/image/background-image/1.jpg');	}
+	.template-background-image.template-background-image-2	{	background-image:url('../media/image/background-image/2.jpg');	}
+	.template-background-image.template-background-image-3	{	background-image:url('../media/image/background-image/3.jpg');	}
+	.template-background-image.template-background-image-4	{	background-image:url('../media/image/background-image/4.jpg');	}
+	.template-background-image.template-background-image-5	{	background-image:url('../media/image/background-image/5.jpg');	}
+	.template-background-image.template-background-image-6	{	background-image:url('../media/image/background-image/6.jpg');	}
+
+/******************************************************************************/
+/* Layout																	  */
+/******************************************************************************/
+
+.template-layout-100>.template-layout-column-left,
+.template-layout-50x50>.template-layout-column-left,
+.template-layout-50x50>.template-layout-column-right,
+.template-layout-33x33x33>.template-layout-column-left,
+.template-layout-33x33x33>.template-layout-column-right,
+.template-layout-33x33x33>.template-layout-column-center,
+.template-layout-25x25x25x25>.template-layout-column-left,
+.template-layout-25x25x25x25>.template-layout-column-center-left,
+.template-layout-25x25x25x25>.template-layout-column-center-right,
+.template-layout-25x25x25x25>.template-layout-column-right,
+.template-layout-66x33>.template-layout-column-left,
+.template-layout-66x33>.template-layout-column-right,
+.template-layout-33x66>.template-layout-column-left,
+.template-layout-33x66>.template-layout-column-right
+{
+	display:block;
+	visibility:hidden;
+	margin-bottom:60px;
+}
+
+.template-layout-100>.template-layout-column-left
+{
+	visibility:visible;
+}
+
+	/**************************************************************************/
+	/* Layout / Flex														  */
+	/**************************************************************************/
+
+	.template-layout-flex
+	{
+		width:100%;
+		display:flex;
+	}
+
+		.template-layout-flex>div
+		{
+			flex-basis:50%;
+			padding:120px;
+			min-height:700px;
+		}
+
+	/**************************************************************************/
+	/* Layout / 100															  */
+	/**************************************************************************/
+
+	.template-layout-100	{}
+
+	.template-layout-100>.template-layout-column-left
+	{
+		width:100%;
+		clear:both;
+		float:left;
+	}
+
+	/**************************************************************************/
+	/* Layout / 50x50														  */
+	/**************************************************************************/
+
+	.template-layout-50x50 {}
+
+	.template-layout-50x50>.template-layout-column-left
+	{
+		clear:both;
+		float:left;
+	}
+
+	.template-layout-50x50>.template-layout-column-right
+	{
+		float:right;
+	}
+
+	.template-layout-50x50>.template-layout-column-left,
+	.template-layout-50x50>.template-layout-column-right
+	{
+		width:48.7179%;
+	}
+
+	.template-layout-50x50>.template-layout-column-left .template-layout-column-left,
+	.template-layout-50x50>.template-layout-column-right .template-layout-column-left,
+	.template-layout-50x50>.template-layout-column-left .template-layout-column-right,
+	.template-layout-50x50>.template-layout-column-right .template-layout-column-right,
+	.template-layout-flex>div .template-layout-column-left,
+	.template-layout-flex>div .template-layout-column-right
+	{
+		width:47.3684%;
+	}
+
+	.template-layout-50x50.template-layout-margin-reset>.template-layout-column-left,
+	.template-layout-50x50.template-layout-margin-reset>.template-layout-column-right
+	{
+		width:50%;
+	}
+
+	/**************************************************************************/
+	/* Layout / 33x33x33													  */
+	/**************************************************************************/
+
+	.template-layout-33x33x33 {}
+
+	.template-layout-33x33x33>.template-layout-column-left
+	{
+		clear:both;
+	}
+
+	.template-layout-33x33x33>.template-layout-column-left,
+	.template-layout-33x33x33>.template-layout-column-center
+	{
+		float:left;
+		margin-right:5.1282%;
+	}
+
+	.template-layout-33x33x33>.template-layout-column-right
+	{
+		float:right;
+	}
+
+	.template-layout-33x33x33>.template-layout-column-left,
+	.template-layout-33x33x33>.template-layout-column-right,
+	.template-layout-33x33x33>.template-layout-column-center
+	{
+		width:29.9145%;
+	}
+
+	.template-layout-33x33x33.template-layout-margin-reset>.template-layout-column-left,
+	.template-layout-33x33x33.template-layout-margin-reset>.template-layout-column-center,
+	.template-layout-33x33x33.template-layout-margin-reset>.template-layout-column-right
+	{
+		float:left;
+		margin:0px;
+		width:33.33334%;
+	}
+
+	/**************************************************************************/
+	/* Layout / 25x25x25x25													  */
+	/**************************************************************************/
+
+	.template-layout-25x25x25x25 {}
+
+	.template-layout-25x25x25x25>.template-layout-column-left
+	{
+		clear:both;
+	}
+
+	.template-layout-25x25x25x25>.template-layout-column-left,
+	.template-layout-25x25x25x25>.template-layout-column-center-left,
+	.template-layout-25x25x25x25>.template-layout-column-center-right
+	{
+		float:left;
+		margin-right:2.5641%;
+	}
+
+	.template-layout-25x25x25x25>.template-layout-column-right
+	{
+		float:right;
+	}
+
+	.template-layout-25x25x25x25>.template-layout-column-left,
+	.template-layout-25x25x25x25>.template-layout-column-center-left,
+	.template-layout-25x25x25x25>.template-layout-column-center-right,
+	.template-layout-25x25x25x25>.template-layout-column-right
+	{
+		width:23.0769%;
+	}
+
+	.template-layout-25x25x25x25.template-layout-margin-reset>.template-layout-column-left,
+	.template-layout-25x25x25x25.template-layout-margin-reset>.template-layout-column-center-left,
+	.template-layout-25x25x25x25.template-layout-margin-reset>.template-layout-column-center-right,
+	.template-layout-25x25x25x25.template-layout-margin-reset>.template-layout-column-right
+	{
+		width:25%;
+		margin:0px;
+	}
+
+	/**************************************************************************/
+	/* Layout / 66x33														  */
+	/**************************************************************************/
+
+	.template-layout-66x33 {}
+
+	.template-layout-66x33>.template-layout-column-left
+	{
+		clear:both;
+	}
+
+	.template-layout-66x33>.template-layout-column-left
+	{
+		float:left;
+		width:64.9572%;
+	}
+
+	.template-layout-66x33>.template-layout-column-right
+	{
+		float:right;
+		width:29.9145%;
+	}
+
+	/**************************************************************************/
+	/* Layout / 33x66														  */
+	/**************************************************************************/
+
+	.template-layout-33x66 {}
+
+	.template-layout-33x66>.template-layout-column-left
+	{
+		clear:both;
+	}
+
+	.template-layout-33x66>.template-layout-column-left
+	{
+		float:left;
+		width:29.9145%;
+	}
+
+	.template-layout-33x66>.template-layout-column-right
+	{
+		float:right;
+		width:64.9572%;
+	}
+
+/******************************************************************************/
+/* Template layout															  */
+/******************************************************************************/
+
+.template-content-layout
+{
+
+}
+
+	.template-content-layout.template-content-layout-sidebar-left .template-content-layout-column-left,
+	.template-content-layout.template-content-layout-sidebar-right .template-content-layout-column-right
+	{
+		width:350px;
+	}
+
+	.template-content-layout.template-content-layout-sidebar-left .template-content-layout-column-right,
+	.template-content-layout.template-content-layout-sidebar-right .template-content-layout-column-left
+	{
+		width:760px;
+	}
+
+	.template-content-layout.template-content-layout-sidebar-left .template-content-layout-column-left,
+	.template-content-layout.template-content-layout-sidebar-right .template-content-layout-column-left
+	{
+		float:left;
+	}
+
+	.template-content-layout.template-content-layout-sidebar-left .template-content-layout-column-right,
+	.template-content-layout.template-content-layout-sidebar-right .template-content-layout-column-right
+	{
+		float:right;
+	}
+
+/******************************************************************************/
+/* Header																	  */
+/******************************************************************************/
+
+h1,h6,
+.template-component-image .template-component-image-hover>span>span>span.template-component-image-hover-header
+{
+	font-weight:900;
+}
+
+h1,h2,h3,h4,h5,h6,
+.template-component-recent-post>li>a>span,
+.template-component-image .template-component-image-hover>span>span>span.template-component-image-hover-header,
+body>.template-component-search-form>form>div>input[type="search"]
+{
+	text-transform:uppercase;
+}
+
+h2,h3,h4,h5,
+.template-component-recent-post>li>a>span
+{
+	font-weight:700;
+}
+
+h1
+{
+	font-size:48px;
+	line-height:60px;
+	letter-spacing:2px;
+}
+
+h2,
+body>.template-component-search-form>form>div>input[type="search"]
+{
+	font-size:29px;
+	line-height:40px;
+	letter-spacing:2px;
+}
+
+h3
+{
+	font-size:21px;
+	line-height:32px;
+	letter-spacing:2px;
+}
+
+h4
+{
+	font-size:18px;
+	line-height:30px;
+	letter-spacing:2px;
+	margin-bottom:30px;
+}
+
+h5,
+.template-component-recent-post>li>a>span
+{
+	font-size:17px;
+	letter-spacing:2px;
+	margin-bottom:30px;
+}
+
+h6,
+.template-component-image .template-component-image-hover>span>span>span.template-component-image-hover-header
+{
+	font-size:14px;
+	line-height:27px;
+	letter-spacing:2px;
+	margin-bottom:30px;
+}
+
+h1 a,h1 a:hover,
+h2 a,h2 a:hover,
+h3 a,h3 a:hover,
+h4 a,h4 a:hover,
+h5 a,h5 a:hover,
+h6 a,h6 a:hover
+{
+	transition:all 0.2s ease;
+	text-decoration:none;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover,
+.template-component-accordion.ui-accordion .ui-accordion-header.ui-state-hover>span+span
+{
+	opacity:0.6;
+}
+
+/******************************************************************************/
+/* Form																		  */
+/******************************************************************************/
+
+form
+{
+	margin:0px;
+	padding:0px;
+}
+
+	input
+	{
+		width:100%;
+		border-width:1px;
+		border-style:solid;
+		padding:10px 15px 10px 15px;
+		-webkit-box-sizing:border-box;‌​
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+
+	input[type="submit"]
+	{
+		width:auto;
+		outline:none;
+		cursor:pointer;
+	}
+
+	/**************************************************************************/
+	/* Form	/ Form field													  */
+	/**************************************************************************/
+
+	.template-component-form-field
+	{
+		width:100%;
+		display:block;
+		border-style:solid;
+		border-width:1px;
+		margin-top:-1px;
+	}
+
+	.template-layout-column-right .template-component-form-field,
+	.template-layout-column-center .template-component-form-field
+	{
+		border-left-width:0px;
+	}
+
+	.template-layout-column-right.template-responsive-column-a .template-component-form-field,
+	.template-layout-column-center.template-responsive-column-a .template-component-form-field
+	{
+		border-left-width:1px;
+	}
+
+	.template-footer .template-component-form-field
+	{
+		border-width:1px;
+	}
+
+		.template-component-form-field label
+		{
+			display:block;
+			font-size:14px;
+			padding:15px 15px 0px 15px;
+		}
+
+		.template-component-form-field input,
+		.template-component-form-field textarea
+		{
+			margin:0px;
+			width:100%;
+			clear:both;
+			border:none;
+			resize:none;
+			display:block;
+			padding:10px 15px 25px 15px;
+		}
+
+/******************************************************************************/
+/* Logo																		  */
+/******************************************************************************/
+
+.template-logo
+{
+	max-width:185px;
+	display:inline-block;
+}
+
+/******************************************************************************/
+/* Icon																		  */
+/******************************************************************************/
+
+	/**************************************************************************/
+	/* Icon	/ Feature														  */
+	/**************************************************************************/
+
+	@font-face
+	{
+		font-family:'template-icon-feature';
+		src:url('../font/template-icon-feature.eot?s9j8n8');
+		src:url('../font/template-icon-feature.eot?#iefixs9j8n8') format('embedded-opentype'),url('../font/template-icon-feature.ttf?s9j8n8') format('truetype'),url('../font/template-icon-feature.woff?s9j8n8') format('woff'),url('../font/template-icon-feature.svg?s9j8n8#template-icon-feature') format('svg');
+		font-weight:normal;
+		font-style:normal;
+	}
+
+	[class^="template-icon-feature-"], [class*=" template-icon-feature-"]
+	{
+		font-family:'template-icon-feature';
+		speak:none;
+		font-size:48px;
+		font-style:normal;
+		font-weight:normal;
+		font-variant:normal;
+		text-transform:none;
+		line-height:1;
+		-webkit-font-smoothing:antialiased;
+		-moz-osx-font-smoothing:grayscale;
+	}
+
+	.template-icon-feature-car-battery:before			{	content:"\61";	}
+	.template-icon-feature-car-key:before				{	content:"\62";	}
+	.template-icon-feature-electric-wrench:before		{	content:"\63";	}
+	.template-icon-feature-check-shield:before			{	content:"\64";	}
+	.template-icon-feature-truck:before					{	content:"\65";	}
+	.template-icon-feature-truck-tow:before				{	content:"\66";	}
+	.template-icon-feature-clock:before					{	content:"\67";	}
+	.template-icon-feature-phone-call:before			{	content:"\68";	}
+	.template-icon-feature-phone-circle:before			{	content:"\69";	}
+	.template-icon-feature-location-map:before			{	content:"\6a";	}
+	.template-icon-feature-car:before					{	content:"\6b";	}
+	.template-icon-feature-car-check:before				{	content:"\6c";	}
+	.template-icon-feature-car-checklist:before			{	content:"\6d";	}
+	.template-icon-feature-car-fix:before				{	content:"\6e";	}
+	.template-icon-feature-service-24h:before			{	content:"\6f";	}
+	.template-icon-feature-car-oil:before				{	content:"\70";	}
+	.template-icon-feature-car-lock:before				{	content:"\71";	}
+	.template-icon-feature-car-music:before				{	content:"\72";	}
+	.template-icon-feature-car-setting:before			{	content:"\73";	}
+	.template-icon-feature-check:before					{	content:"\74";	}
+	.template-icon-feature-eco-fuel:before				{	content:"\75";	}
+	.template-icon-feature-eco-fuel-barrel:before		{	content:"\76";	}
+	.template-icon-feature-eco-globe:before				{	content:"\77";	}
+	.template-icon-feature-eco-car:before				{	content:"\78";	}
+	.template-icon-feature-eco-nature:before			{	content:"\79";	}
+	.template-icon-feature-inflator-pump:before			{	content:"\7a";	}
+	.template-icon-feature-lightbulb:before				{	content:"\41";	}
+	.template-icon-feature-gps:before					{	content:"\42";	}
+	.template-icon-feature-oil-can:before				{	content:"\43";	}
+	.template-icon-feature-oil-gauge:before				{	content:"\44";	}
+	.template-icon-feature-oil-station:before			{	content:"\45";	}
+	.template-icon-feature-piggy-bank:before			{	content:"\46";	}
+	.template-icon-feature-road:before					{	content:"\47";	}
+	.template-icon-feature-seatbelt-lock:before			{	content:"\48";	}
+	.template-icon-feature-share-time:before			{	content:"\49";	}
+	.template-icon-feature-steering-wheel:before		{	content:"\4a";	}
+	.template-icon-feature-car-audio:before				{	content:"\4b";	}
+	.template-icon-feature-engine-belt:before			{	content:"\4c";	}
+	.template-icon-feature-camper:before				{	content:"\4d";	}
+	.template-icon-feature-wallet:before				{	content:"\4e";	}
+	.template-icon-feature-parking-sensor:before		{	content:"\4f";	}
+	.template-icon-feature-wrench:before				{	content:"\50";	}
+	.template-icon-feature-wrench-double:before			{	content:"\51";	}
+	.template-icon-feature-windshield:before			{	content:"\52";	}
+	.template-icon-feature-alarm:before					{	content:"\53";	}
+	.template-icon-feature-car-2:before					{	content:"\54";	}
+	.template-icon-feature-car-3:before					{	content:"\55";	}
+	.template-icon-feature-cog-double:before			{	content:"\56";	}
+	.template-icon-feature-email:before					{	content:"\57";	}
+	.template-icon-feature-gearbox:before				{	content:"\58";	}
+	.template-icon-feature-gauge:before					{	content:"\59";	}
+	.template-icon-feature-garage:before				{	content:"\5a";	}
+	.template-icon-feature-tunning:before				{	content:"\30";	}
+	.template-icon-feature-phone-call-24h:before		{	content:"\31";	}
+	.template-icon-feature-phone:before					{	content:"\32";	}
+	.template-icon-feature-video:before					{	content:"\33";	}
+	.template-icon-feature-image:before					{	content:"\34";	}
+	.template-icon-feature-images:before				{	content:"\35";	}
+	.template-icon-feature-quote:before					{	content:"\36";	}
+	.template-icon-feature-screwdriver:before			{	content:"\37";	}
+	.template-icon-feature-signal-warning:before		{	content:"\38";	}
+	.template-icon-feature-snow-crystal:before			{	content:"\39";	}
+	.template-icon-feature-speed-gauge:before			{	content:"\21";	}
+	.template-icon-feature-air-conditioning:before		{	content:"\40";	}
+	.template-icon-feature-heating:before				{	content:"\23";	}
+	.template-icon-feature-toolbox:before				{	content:"\24";	}
+	.template-icon-feature-engine-belt-2:before			{	content:"\25";	}
+	.template-icon-feature-toolbox-2:before				{	content:"\5e";	}
+	.template-icon-feature-wrench-screwdriver:before	{	content:"\26";	}
+	.template-icon-feature-caution-fence:before			{	content:"\2a";	}
+	.template-icon-feature-certificate:before			{	content:"\28";	}
+	.template-icon-feature-fax:before					{	content:"\29";	}
+	.template-icon-feature-headlight:before				{	content:"\2d";	}
+	.template-icon-feature-facebook:before				{	content:"\3d";	}
+	.template-icon-feature-twitter:before				{	content:"\5b";	}
+	.template-icon-feature-google-plus:before			{	content:"\5d";	}
+	.template-icon-feature-youtube:before				{	content:"\3b";	}
+	.template-icon-feature-pen:before					{	content:"\27";	}
+	.template-icon-feature-faq:before					{	content:"\5c";	}
+	.template-icon-feature-testimonials:before			{	content:"\2c";	}
+	.template-icon-feature-team:before					{	content:"\2e";	}
+	.template-icon-feature-person:before				{	content:"\2f";	}
+	.template-icon-feature-percent:before				{	content:"\60";	}
+	.template-icon-feature-shopping-cart:before			{	content:"\7e";	}
+	.template-icon-feature-check-2:before				{	content:"\7b";	}
+	.template-icon-feature-payment:before				{	content:"\7d";	}
+	.template-icon-feature-coffee:before				{	content:"\22";	}
+	.template-icon-feature-checklist:before				{	content:"\7c";	}
+	.template-icon-feature-fax-2:before					{	content:"\3c";	}
+	.template-icon-feature-user-chat:before				{	content:"\3e";	}
+	.template-icon-feature-spray-bottle:before			{	content:"\3a";	}
+	.template-icon-feature-vacuum-cleaner:before		{	content:"\3f";	}
+	.template-icon-feature-hose-nozzle:before			{	content:"\2b";	}
+	.template-icon-feature-water-drop:before			{	content:"\5f";	}
+
+	/**************************************************************************/
+	/* Icon	/ Social														  */
+	/**************************************************************************/
+
+	@font-face
+	{
+		font-family:'template-icon-social';
+		src:url('../font/template-icon-social.eot?balj0b');
+		src:url('../font/template-icon-social.eot?#iefixbalj0b') format('embedded-opentype'),url('../font/template-icon-social.ttf?balj0b') format('truetype'),url('../font/template-icon-social.woff?balj0b') format('woff'),url('../font/template-icon-social.svg?balj0b#template-icon-social') format('svg');
+		font-weight:normal;
+		font-style:normal;
+	}
+
+	[class^="template-icon-social-"], [class*=" template-icon-social-"]
+	{
+		font-family:'template-icon-social';
+		speak:none;
+		font-style:normal;
+		font-weight:normal;
+		font-variant:normal;
+		text-transform:none;
+		line-height:1;
+		font-size:18px;
+		-webkit-font-smoothing:antialiased;
+		-moz-osx-font-smoothing:grayscale;
+	}
+
+	.template-icon-social-envato:before				{	content:"\43";	}
+	.template-icon-social-angies-list:before		{	content:"\44";	}
+	.template-icon-social-twitter:before			{	content:"\61";	}
+	.template-icon-social-facebook:before			{	content:"\62";	}
+	.template-icon-social-github:before				{	content:"\63";	}
+	.template-icon-social-rss:before				{	content:"\64";	}
+	.template-icon-social-pinterest:before			{	content:"\65";	}
+	.template-icon-social-google-plus:before		{	content:"\66";	}
+	.template-icon-social-linkedin:before			{	content:"\67";	}
+	.template-icon-social-xing:before				{	content:"\68";	}
+	.template-icon-social-youtube:before			{	content:"\69";	}
+	.template-icon-social-instagram:before			{	content:"\6a";	}
+	.template-icon-social-flickr:before				{	content:"\6b";	}
+	.template-icon-social-tumblr:before				{	content:"\6c";	}
+	.template-icon-social-dribbble:before			{	content:"\6d";	}
+	.template-icon-social-skype:before				{	content:"\6e";	}
+	.template-icon-social-foursquare:before			{	content:"\6f";	}
+	.template-icon-social-vk:before					{	content:"\70";	}
+	.template-icon-social-weibo:before				{	content:"\71";	}
+	.template-icon-social-reddit:before				{	content:"\72";	}
+	.template-icon-social-stumbleupon:before		{	content:"\73";	}
+	.template-icon-social-behance:before			{	content:"\74";	}
+	.template-icon-social-spotify:before			{	content:"\75";	}
+	.template-icon-social-deviantart:before			{	content:"\76";	}
+	.template-icon-social-soundcloud:before			{	content:"\77";	}
+	.template-icon-social-vine:before				{	content:"\78";	}
+	.template-icon-social-yelp:before				{	content:"\79";	}
+	.template-icon-social-paypal:before				{	content:"\7a";	}
+	.template-icon-social-houzz:before				{	content:"\41";	}
+	.template-icon-social-vimeo:before				{	content:"\42";	}
+
+	/**************************************************************************/
+	/* Icon / Meta															  */
+	/**************************************************************************/
+
+	@font-face
+	{
+		font-family:'template-icon-meta';
+		src:url('../font/template-icon-meta.eot?-ijfktg');
+		src:url('../font/template-icon-meta.eot?#iefix-ijfktg') format('embedded-opentype'),url('../font/template-icon-meta.ttf?-ijfktg') format('truetype'),url('../font/template-icon-meta.woff?-ijfktg') format('woff'),url('../font/template-icon-meta.svg?-ijfktg#template-icon-meta') format('svg');
+		font-weight:normal;
+		font-style:normal;
+	}
+
+	[class^="template-icon-meta-"], [class*=" template-icon-meta-"]
+	{
+		font-family:'template-icon-meta';
+		speak:none;
+		font-style:normal;
+		font-weight:normal;
+		font-variant:normal;
+		text-transform:none;
+		line-height:1;
+		-webkit-font-smoothing:antialiased;
+		-moz-osx-font-smoothing:grayscale;
+	}
+
+	.template-icon-meta-arrow-right-12:before			{	content: "\71";	}
+	.template-icon-meta-arrow-large-rl:before			{	content: "\61";	}
+	.template-icon-meta-arrow-large-tb:before			{	content: "\62";	}
+	.template-icon-meta-check:before					{	content: "\63";	}
+	.template-icon-meta-author:before					{	content: "\64";	}
+	.template-icon-meta-time:before						{	content: "\65";	}
+	.template-icon-meta-search:before					{	content: "\66";	}
+	.template-icon-meta-mail:before						{	content: "\67";	}
+	.template-icon-meta-comment:before					{	content: "\68";	}
+	.template-icon-meta-user:before						{	content: "\69";	}
+	.template-icon-meta-category:before					{	content: "\6a";	}
+	.template-icon-meta-date:before						{	content: "\6b";	}
+	.template-icon-meta-marker:before					{	content: "\6c";	}
+	.template-icon-meta-tag:before						{	content: "\6d";	}
+	.template-icon-meta-cart:before						{	content: "\6e";	}
+	.template-icon-meta-arrow-small-rl:before			{	content: "\6f";	}
+	.template-icon-meta-arrow-small-tb:before			{	content: "\70";	}
+	.template-icon-meta-menu:before						{	content: "\72"; }
+
+	/**************************************************************************/
+	/* Icon / Vehicle														  */
+	/**************************************************************************/
+
+	@font-face
+	{
+		font-family:'template-icon-vehicle';
+		src:url('../font/template-icon-vehicle.eot?krrzze');
+		src:url('../font/template-icon-vehicle.eot?#iefixkrrzze') format('embedded-opentype'), url('../font/template-icon-vehicle.ttf?krrzze') format('truetype'), url('../font/template-icon-vehicle.woff?krrzze') format('woff'), url('../font/template-icon-vehicle.svg?krrzze#template-icon-vehicle') format('svg');
+		font-weight:normal;
+		font-style:normal;
+	}
+
+	[class^="template-icon-vehicle-"], [class*=" template-icon-vehicle-"]
+	{
+		font-family:'template-icon-vehicle' !important;
+		speak:none;
+		font-style:normal;
+		font-weight:normal;
+		font-variant:normal;
+		text-transform:none;
+		line-height:1;
+		-webkit-font-smoothing:antialiased;
+		-moz-osx-font-smoothing:grayscale;
+	}
+
+	.template-icon-vehicle-jetski:before
+	{
+		content:"\79";
+		font-size:28px;
+	}
+	.template-icon-vehicle-boat:before
+	{
+		content:"\78";
+		font-size:30px;
+	}
+	.template-icon-vehicle-quad:before
+	{
+		content:"\75";
+		font-size:61px;
+	}
+	.template-icon-vehicle-trailer:before
+	{
+		content:"\74";
+		font-size:23px;
+	}
+	.template-icon-vehicle-bicycle:before
+	{
+		content:"\77";
+		font-size:41px;
+	}
+	.template-icon-vehicle-motorcycle:before
+	{
+		content:"\76";
+		font-size:60px;
+	}
+	.template-icon-vehicle-mini-car:before
+	{
+		content:"\61";
+		font-size:60px;
+	}
+	.template-icon-vehicle-small-car:before
+	{
+		content:"\62";
+		font-size:60px;
+	}
+	.template-icon-vehicle-pickup:before
+	{
+		content:"\67";
+		font-size:60px;
+	}
+	.template-icon-vehicle-limousine:before
+	{
+		content:"\68";
+		font-size:60px;
+	}
+	.template-icon-vehicle-4x4:before
+	{
+		content:"\66";
+		font-size:61px;
+	}
+	.template-icon-vehicle-car-mid-size:before
+	{
+		content:"\63";
+		font-size:60px;
+	}
+	.template-icon-vehicle-truck-mid-size:before
+	{
+		content:"\6b";
+		font-size:60px;
+	}
+	.template-icon-vehicle-truck:before
+	{
+		content:"\6c";
+		font-size:60px;
+	}
+	.template-icon-vehicle-double-decker:before
+	{
+		content:"\70";
+		font-size:60px;
+	}
+	.template-icon-vehicle-bus:before
+	{
+		content:"\6f";
+		font-size:60px;
+	}
+	.template-icon-vehicle-van:before
+	{
+		content:"\69";
+		font-size:60px;
+	}
+	.template-icon-vehicle-midibus:before
+	{
+		content:"\6e";
+		font-size:60px;
+	}
+	.template-icon-vehicle-heavy-equipment:before
+	{
+		content:"\71";
+		font-size:60px;
+	}
+	.template-icon-vehicle-station-wagon:before
+	{
+		content:"\64";
+		font-size:60px;
+	}
+	.template-icon-vehicle-suv:before
+	{
+		content:"\65";
+		font-size:60px;
+	}
+	.template-icon-vehicle-truck-large:before
+	{
+		content:"\72";
+		font-size:60px;
+	}
+	.template-icon-vehicle-minibus:before
+	{
+		content:"\6d";
+		font-size:60px;
+	}
+	.template-icon-vehicle-caravan:before
+	{
+		content:"\73";
+		font-size:60px;
+	}
+	.template-icon-vehicle-minivan:before
+	{
+		content:"\6a";
+		font-size:60px;
+	}
+
+	/**************************************************************************/
+	/* Icon / Booking meta													  */
+	/**************************************************************************/
+
+	@font-face
+	{
+		font-family:'template-icon-booking-meta';
+		src:url('../font/template-icon-booking-meta.eot?8z8jdv');
+		src:url('../font/template-icon-booking-meta.eot?#iefix8z8jdv') format('embedded-opentype'),url('../font/template-icon-booking-meta.ttf?8z8jdv') format('truetype'),url('../font/template-icon-booking-meta.woff?8z8jdv') format('woff'),url('../font/template-icon-booking-meta.svg?8z8jdv#cbs-meta') format('svg');
+		font-weight:normal;
+		font-style:normal;
+	}
+
+	.template-component-booking .template-component-button:before,
+	[class^="template-icon-booking-meta-"], [class*=" template-icon-booking-meta-"]
+	{
+		font-family:'template-icon-booking-meta' !important;
+		speak:none;
+		font-style:normal;
+		font-weight:normal;
+		font-variant:normal;
+		text-transform:none;
+		line-height:1;
+		-webkit-font-smoothing:antialiased;
+		-moz-osx-font-smoothing:grayscale;
+	}
+
+	.template-component-booking .template-component-button:before,
+	.template-icon-booking-meta-check:before
+	{
+		content:"\65";
+		font-size:16px;
+	}
+
+	.template-icon-booking-meta-total-price:before
+	{
+		content:"\69";
+		font-size:48px;
+	}
+	.template-icon-booking-meta-total-duration:before
+	{
+		content:"\68";
+		font-size:48px;
+	}
+	.template-icon-booking-meta-duration:before
+	{
+		content:"\61";
+		font-size:18px;
+		top:2px;
+		margin-right:4px;
+		position:relative;
+	}
+	.template-icon-booking-meta-price:before
+	{
+		content:"\62";
+		font-size:18px;
+		top:2px;
+		margin-right:4px;
+		position:relative;
+	}
+
+/******************************************************************************/
+/* Template																	  */
+/******************************************************************************/
+
+	/**************************************************************************/
+	/* Template	/ Header													  */
+	/**************************************************************************/
+
+	.template-header
+	{
+		height:auto !important;
+	}
+
+	.template-header.template-header-background
+	{
+		padding:230px 0px 130px 0px;
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:center center;
+	}
+
+	.template-header.template-header-background-1 { background-image:url('../media/image/header/header_01.jpg'); }
+	.template-header.template-header-background-2 { background-image:url('../media/image/header/header_02.jpg'); }
+	.template-header.template-header-background-3 { background-image:url('../media/image/header/header_03.jpg'); }
+	.template-header.template-header-background-4 { background-image:url('../media/image/header/header_04.jpg'); }
+	.template-header.template-header-background-5 { background-image:url('../media/image/header/header_05.jpg'); }
+
+		/**********************************************************************/
+		/* Template	/ Header / Top											  */
+		/**********************************************************************/
+
+		.template-header .template-header-top
+		{
+			top:0px;
+			width:100%;
+			z-index:99999;
+			position:absolute;
+			text-align:center;
+		}
+
+		.template-header .template-header-top.template-header-top-sticky,
+		.template-header .template-header-top.template-header-top-static
+		{
+			box-shadow:0px 1px 5px 0px rgba(0,0,0,0.1);
+		}
+
+		.template-header .template-header-top.template-header-top-sticky
+		{
+			position:fixed;
+		}
+
+		.template-header .template-header-top.template-header-top-static
+		{
+			height:100%;
+			overflow:hidden;
+			position:static;
+		}
+
+			/******************************************************************/
+			/* Template	/ Header / Top / Logo								  */
+			/******************************************************************/
+
+			.template-header .template-header-top .template-header-top-logo
+			{
+				z-index:2;
+				float:left;
+				position:relative;
+				padding-left:40px;
+			}
+
+				.template-header .template-header-top .template-header-top-logo a
+				{
+					font-size:0px;
+					display:block;
+				}
+
+					.template-header .template-header-top .template-header-top-logo a .template-logo.template-logo-sticky,
+					.template-header .template-header-top.template-header-top-sticky .template-header-top-logo a .template-logo,
+					.template-header .template-header-top.template-header-top-static .template-header-top-logo a .template-logo
+					{
+						display:none;
+					}
+
+					.template-header .template-header-top.template-header-top-sticky .template-header-top-logo a .template-logo.template-logo-sticky,
+					.template-header .template-header-top.template-header-top-static .template-header-top-logo a .template-logo.template-logo-sticky
+					{
+						display:inline-block;
+					}
+
+			/******************************************************************/
+			/* Template	/ Header / Top / Menu								  */
+			/******************************************************************/
+
+			.template-header .template-header-top .template-header-top-menu
+			{
+				left:0px;
+				right:0px;
+				z-index:1;
+				position:absolute;
+			}
+
+			/******************************************************************/
+			/* Template	/ Header / Top / Icon list							  */
+			/******************************************************************/
+
+			.template-header .template-header-top .template-header-top-icon-list
+			{
+				z-index:2;
+				float:right;
+				position:relative;
+				margin:25px 30px 29px 0px;
+			}
+
+				.template-header .template-header-top .template-header-top-icon-list a
+				{
+					font-size:18px;
+				}
+
+				.template-header .template-header-top .template-header-top-icon-list .template-icon-meta-menu
+				{
+					top:2px;
+					display:none;
+					font-size:24px;
+					margin-left:10px;
+					border-width:1px;
+					border-style:solid;
+					position:relative;
+				}
+
+				.template-header .template-header-top .template-header-top-icon-list .template-icon-meta-menu:before
+				{
+					top:-2px;
+					position:relative;
+				}
+
+		/**********************************************************************/
+		/* Template	/ Header / Bottom										  */
+		/**********************************************************************/
+
+		.template-header .template-header-bottom
+		{
+			overflow:hidden;
+			max-width:100%;
+		}
+
+			/******************************************************************/
+			/* Template	/ Header / Bottom / Page title						  */
+			/******************************************************************/
+
+			.template-header .template-header-bottom .template-header-bottom-page-title
+			{
+				text-align:center;
+				text-transform:uppercase;
+			}
+
+			/******************************************************************/
+			/* Template	/ Header / Bottom / Breadcrumb						  */
+			/******************************************************************/
+
+			.template-header .template-header-bottom .template-header-bottom-page-breadcrumb
+			{
+				margin-top:20px;
+				text-align:center;
+				text-transform:uppercase;
+			}
+
+				.template-header .template-header-bottom .template-header-bottom-page-breadcrumb a
+				{
+					font-size:14px;
+					line-height:28px;
+					letter-spacing:1px;
+					text-decoration:none;
+				}
+
+					.template-header .template-header-bottom .template-header-bottom-page-breadcrumb a:hover
+					{
+						text-decoration:underline;
+					}
+
+				.template-header .template-header-bottom .template-header-bottom-page-breadcrumb span
+				{
+					width:30px;
+					font-size:11px;
+					display:inline-block;
+				}
+
+	/**************************************************************************/
+	/* Template / Content													  */
+	/**************************************************************************/
+
+	.template-content
+	{
+
+	}
+
+		.template-content .template-section
+		{
+			padding:110px 0px 120px 0px;
+		}
+
+		.template-content .template-section-padding-reset
+		{
+			padding:0px;
+		}
+
+		.template-content .template-section-padding-1
+		{
+			padding-bottom:60px;
+		}
+
+		.template-content .template-section-padding-2
+		{
+			padding-bottom:90px;
+		}
+
+	/**************************************************************************/
+	/* Template / Footer													  */
+	/**************************************************************************/
+
+	.template-footer
+	{
+		padding:60px 0px 60px 0px;
+	}
+
+		.template-footer a
+		{
+			text-decoration:none;
+		}
+
+		.template-footer a:hover
+		{
+			text-decoration:underline;
+		}
+
+		.template-footer .template-logo
+		{
+			max-width:170px;
+		}
+
+		/**********************************************************************/
+		/* Template / Footer / Top											  */
+		/**********************************************************************/
+
+		.template-footer .template-footer-top
+		{
+
+		}
+
+		/**********************************************************************/
+		/* Template / Footer / Bottom										  */
+		/**********************************************************************/
+
+		.template-footer .template-footer-bottom
+		{
+			margin-top:10px;
+			padding-top:50px;
+			text-align:center;
+			border-style:solid;
+			border-width:1px 0px 0px 0px;
+		}
+
+			.template-footer .template-footer-bottom .template-social-icon-list
+			{
+
+			}
+
+			.template-footer .template-footer-bottom .template-footer-bottom-copyright
+			{
+				margin-top:20px;
+			}
+
+/******************************************************************************/
+/* Flexnav																	  */
+/******************************************************************************/
+
+.flexnav
+{
+	width:100%;
+	overflow:auto;
+	max-height:100%;
+}
+
+	.flexnav li
+	{
+		float:none;
+		width:100%;
+		margin-top:-1px;
+	}
+
+	.flexnav>ul>li:first-child
+	{
+		margin-top:0px;
+	}
+
+		.flexnav li a
+		{
+			padding:15px;
+			border-style:solid;
+			text-transform:uppercase;
+			border-width:1px 0px 1px 0px;
+		}
+
+			.flexnav li ul li a
+			{
+				text-transform:none;
+			}
+
+		.flexnav li a,
+		.flexnav li a:hover
+		{
+			text-decoration:none;
+		}
+
+			.flexnav li.item-with-ul ul
+			{
+				position:static;
+			}
+
+			.flexnav li.item-with-ul ul.flexnav-show
+			{
+
+			}
+
+				.flexnav li.item-with-ul ul li a
+				{
+					padding-left:30px;
+				}
+
+		.flexnav .touch-button
+		{
+			z-index:2;
+			height:56px;
+			margin-top:1px;
+			line-height:56px;
+			transform:rotate(180deg);
+		}
+
+			.flexnav .touch-button i
+			{
+				display:none;
+			}
+
+		.flexnav .touch-button.template-component-menu-button-close
+		{
+			width:100%;
+			border:none;
+			text-align:center;
+			transform:rotate(0deg);
+		}
+
+			.flexnav .touch-button.template-component-menu-button-close span
+			{
+				width:100%;
+			}
+
+/******************************************************************************/
+/* Blog																		  */
+/******************************************************************************/
+
+.template-blog
+{
+
+}
+
+	.template-blog>ul
+	{
+		margin:0px;
+		padding:0px;
+		list-style:none;
+	}
+
+		.template-blog>ul>li
+		{
+			margin-top:60px;
+			padding-bottom:60px;
+			border-style:solid;
+			border-width:0px 0px 1px 0px;
+		}
+
+		.template-blog>ul>li:first-child
+		{
+			margin-top:0px;
+		}
+
+	/**************************************************************************/
+	/* Blog / Header														  */
+	/**************************************************************************/
+
+	.template-blog .template-blog-header
+	{
+		width:100%;
+		height:100%;
+		display:table;
+		overflow:hidden;
+		margin-bottom:30px;
+	}
+
+	.template-blog .template-blog-header>div
+	{
+		display:table-cell;
+		vertical-align:middle;
+	}
+
+	.template-blog .template-blog-header>div:first-child
+	{
+		width:80px;
+	}
+
+		/**********************************************************************/
+		/* Blog / Header / Date												  */
+		/**********************************************************************/
+
+		.template-blog .template-blog-header .template-blog-header-date
+		{
+
+		}
+
+			.template-blog .template-blog-header .template-blog-header-date span
+			{
+				display:block;
+				font-size:13px;
+				text-align:center;
+				border-style:solid;
+				padding:5px 0px 5px 0px;
+				text-transform:uppercase;
+				border-width:1px 1px 0px 0px;
+			}
+
+			.template-blog .template-blog-header .template-blog-header-date span:first-child
+			{
+				border-top-width:0px;
+			}
+
+			.template-blog .template-blog-header .template-blog-header-date span:first-child+span
+			{
+				font-size:21px;
+				padding-top:0px;
+				font-weight:bold;
+				letter-spacing:2px;
+			}
+
+		/**********************************************************************/
+		/* Blog / Header / Header											  */
+		/* Blog / Header / Meta												  */
+		/**********************************************************************/
+
+		.template-blog .template-blog-header .template-blog-header-header,
+		.template-blog .template-blog-header .template-blog-header-meta
+		{
+			padding-left:40px;
+		}
+
+			.template-blog .template-blog-header .template-blog-header-header>a,
+			.template-blog .template-blog-header .template-blog-header-header>a:hover
+			{
+				text-decoration:none;
+			}
+
+		/**********************************************************************/
+		/* Blog / Header / Header											  */
+		/**********************************************************************/
+
+		.template-blog .template-blog-header .template-blog-header-header
+		{
+
+		}
+
+			.template-blog .template-blog-header .template-blog-header-header h3
+			{
+
+			}
+
+		/**********************************************************************/
+		/* Blog / Header / Meta												  */
+		/**********************************************************************/
+
+		.template-blog .template-blog-header .template-blog-header-meta
+		{
+			margin-top:15px;
+		}
+
+			.template-blog .template-blog-header .template-blog-header-meta>span
+			{
+				margin-left:30px;
+			}
+
+			.template-blog .template-blog-header .template-blog-header-meta>span:first-child
+			{
+				margin-left:0px;
+			}
+
+				.template-blog .template-blog-header .template-blog-header-meta>span>span
+				{
+					padding-left:15px;
+				}
+
+	/**************************************************************************/
+	/* Blog / Image															  */
+	/**************************************************************************/
+
+	.template-blog .template-blog-image
+	{
+
+	}
+
+	.template-blog.template-blog-style-2 .template-blog-image
+	{
+		float:left;
+		width:270px;
+	}
+
+		.template-blog .template-blog-image a
+		{
+			display:block;
+		}
+
+			.template-blog .template-blog-image a img
+			{
+
+			}
+
+	/**************************************************************************/
+	/* Blog / Excerpt														  */
+	/* Blog / Content														  */
+	/**************************************************************************/
+
+	.template-blog.template-blog-style-2 .template-blog-image+.template-blog-excerpt
+	{
+		margin-left:300px;
+	}
+
+		.template-blog .template-blog-excerpt p
+		{
+			padding:30px 0px 30px 0px;
+		}
+
+		.template-blog .template-blog-content>p:first-child
+		{
+			padding-top:30px;
+		}
+
+		.template-blog .template-blog-content p+h4
+		{
+			margin-top:50px;
+		}
+
+		.template-blog .template-blog-content h4+p
+		{
+			padding-top:0px;
+		}
+
+		.template-blog.template-blog-style-2 .template-blog-excerpt>p:first-child
+		{
+			padding-top:0px;
+		}
+
+	/**************************************************************************/
+	/* Blog / Author info													  */
+	/**************************************************************************/
+
+	.template-blog .template-blog-author-info
+	{
+		border-style:solid;
+		border-width:1px 0px 1px 0px;
+		margin:60px 0px 60px 0px;
+		padding:30px 0px 30px 0px;
+	}
+
+		.template-blog .template-blog-author-info img
+		{
+			float:left;
+		}
+
+		.template-blog .template-blog-author-info>span,
+		.template-blog .template-blog-author-info p
+		{
+			margin-left:120px;
+		}
+
+		.template-blog .template-blog-author-info>span
+		{
+			display:block;
+		}
+
+		.template-blog .template-blog-author-info span
+		{
+			font-size:16px;
+		}
+
+		.template-blog .template-blog-author-info>p
+		{
+			padding:0px;
+			padding-top:20px;
+		}
+
+	/**************************************************************************/
+	/* Blog / Meta															  */
+	/**************************************************************************/
+
+	.template-blog .template-blog-meta
+	{
+		width:100%;
+		display:table;
+	}
+
+		.template-blog .template-blog-meta>div
+		{
+			display:table-row;
+		}
+
+			.template-blog .template-blog-meta>div>div
+			{
+				display:table-cell;
+			}
+
+			.template-blog .template-blog-meta>div>div+div
+			{
+				text-align:right;
+			}
+
+			.template-blog .template-blog-meta>div>div>ul,
+			.template-blog .template-blog-meta>div>div>ul>li,
+			.template-blog .template-blog-meta>div>div>span
+			{
+				display:inline-block;
+			}
+
+			.template-blog .template-blog-meta>div>div>span
+			{
+				padding-right:15px;
+			}
+
+	/**************************************************************************/
+	/* Blog / Comment form													  */
+	/**************************************************************************/
+
+	.template-blog-comment-form
+	{
+		margin-top:60px;
+	}
+
+	/**************************************************************************/
+	/* Blog / Comment List													  */
+	/**************************************************************************/
+
+	.template-blog-comment-list
+	{
+		margin-top:60px;
+	}
+
+		.template-blog-comment-list ul
+		{
+			margin:0px;
+			padding:0px;
+			list-style:none;
+		}
+
+			.template-blog-comment-list ul>li
+			{
+
+			}
+
+				.template-blog-comment-list>ul>li:first-child>div
+				{
+					padding-top:0px;
+				}
+
+				.template-blog-comment-list ul>li>div
+				{
+					padding-top:60px;
+					padding-bottom:60px;
+					border-style:solid;
+					border-width:0px 0px 1px 0px;
+				}
+
+					.template-blog-comment-list ul>li>div>img
+					{
+						float:left;
+					}
+
+					.template-blog-comment-list ul>li>div>span
+					{
+						display:inline-block;
+					}
+
+					.template-blog-comment-list ul>li>div>span
+					{
+						font-size:18px;
+						margin-left:40px;
+					}
+
+						.template-blog-comment-list ul>li>div>span>span
+						{
+							font-size:15px;
+						}
+
+					.template-blog-comment-list ul>li>div>span+span
+					{
+						margin-left:20px;
+					}
+
+					.template-blog-comment-list ul>li>div>a
+					{
+						float:right;
+					}
+
+					.template-blog-comment-list ul>li>div>p
+					{
+						padding:0px;
+						padding-top:20px;
+						margin-left:120px;
+					}
+
+			.template-blog-comment-list ul ul
+			{
+				margin-left:120px;
+			}
+
+/******************************************************************************/
+/* Widget list																  */
+/******************************************************************************/
+
+ul.template-widget-list
+{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+
+	ul.template-widget-list>li
+	{
+		margin-bottom:60px;
+	}
+
+	ul.template-widget-list>li:last-child
+	{
+		margin-bottom:0px;
+	}
+
+		ul.template-widget-list>li>.template-widget
+		{
+
+		}
+
+			ul.template-widget-list>li>.template-widget>h6
+			{
+				margin-bottom:40px;
+			}
+
+		/**********************************************************************/
+		/* Widget list / Search												  */
+		/**********************************************************************/
+
+		/**********************************************************************/
+		/* Widget list / Text												  */
+		/**********************************************************************/
+
+		/**********************************************************************/
+		/* Widget list / Service											  */
+		/* Widget list / Archive											  */
+		/* Widget list / Category											  */
+		/**********************************************************************/
+
+		.template-widget-service,
+		.template-widget-archive,
+		.template-widget-category
+		{
+
+		}
+
+			.template-widget-service ul,
+			.template-widget-archive ul,
+			.template-widget-category ul
+			{
+				margin:0px;
+				padding:0px;
+				list-style:none;
+				margin-top:-15px;
+			}
+
+				.template-widget-service ul li,
+				.template-widget-archive ul li,
+				.template-widget-category ul li
+				{
+					margin-bottom:0px;
+				}
+
+					.template-widget-service ul li a,
+					.template-widget-archive ul li a,
+					.template-widget-category ul li a
+					{
+						clear:both;
+						display:block;
+						border-style:solid;
+						padding-top:15px;
+						padding-bottom:15px;
+						border-width:0px 0px 1px 0px;
+					}
+
+					.template-widget-service ul li a,
+					.template-widget-service ul li a:hover,
+					.template-widget-archive ul li a,
+					.template-widget-archive ul li a:hover,
+					.template-widget-category ul li a,
+					.template-widget-category ul li a:hover
+					{
+						text-decoration:none;
+					}
+
+						.template-widget-service ul li a span,
+						.template-widget-archive ul li a span,
+						.template-widget-category ul li a span
+						{
+
+						}
+
+						.template-widget-service ul li a span+span,
+						.template-widget-archive ul li a span+span,
+						.template-widget-category ul li a span+span
+						{
+							float:right;
+						}
+
+						.template-widget-service ul li a span+span
+						{
+							top:5px;
+							position:relative;
+						}
+
+		/**********************************************************************/
+		/* Widget list / Tag												  */
+		/**********************************************************************/
+
+		.template-widget-tag
+		{
+
+		}
+
+			.template-widget-tag li
+			{
+				display:inline-block;
+			}
+
+				.template-widget-tag li a
+				{
+					display:block;
+					margin-bottom:5px;
+					border-width:1px;
+					border-style:solid;
+					padding:8px 14px 8px 14px;
+				}
+
+				.template-widget-tag li a,
+				.template-widget-tag li a:hover
+				{
+					text-decoration:none;
+				}
+
+		/**********************************************************************/
+		/* Widget list / Latest post										  */
+		/**********************************************************************/
+
+		.template-widget-latest-post,
+		.template-widget-most-comment
+		{
+
+		}
+
+			.template-widget-latest-post ul,
+			.template-widget-most-comment ul
+			{
+				margin:0px;
+				padding:0px;
+				list-style:none;
+			}
+
+				.template-widget-latest-post ul li,
+				.template-widget-most-comment ul li
+				{
+					clear:both;
+					margin-bottom:30px;
+				}
+
+					.template-widget-latest-post ul li a,
+					.template-widget-most-comment ul li a
+					{
+						height:100%;
+						display:block;
+						overflow:hidden;
+					}
+
+					.template-widget-latest-post ul li a,
+					.template-widget-latest-post ul li a:hover,
+					.template-widget-latest-post ul li a:hover>span+span,
+					.template-widget-most-comment ul li a,
+					.template-widget-most-comment ul li a:hover,
+					.template-widget-most-comment ul li a:hover>span+span
+					{
+						text-decoration:none;
+					}
+
+					.template-widget-latest-post ul li a:hover>span,
+					.template-widget-most-comment ul li a:hover>span
+					{
+						text-decoration:underline;
+					}
+
+						.template-widget-latest-post ul li a img,
+						.template-widget-most-comment ul li a img
+						{
+							float:left;
+						}
+
+						.template-widget-latest-post ul li a>span,
+						.template-widget-most-comment ul li a>span
+						{
+							display:block;
+							margin-left:120px;
+						}
+
+						.template-widget-latest-post ul li a>span+span,
+						.template-widget-most-comment ul li a>span+span
+						{
+							font-size:18px;
+							margin-top:10px;
+						}
+
+							.template-widget-latest-post ul li a>span+span>span,
+							.template-widget-most-comment ul li a>span+span>span
+							{
+								bottom:3px;
+								font-size:15px;
+								line-height:28px;
+								padding-left:10px;
+								position:relative;
+							}
+
+/******************************************************************************/
+/* Pagination																  */
+/******************************************************************************/
+
+.template-pagination
+{
+	width:100%;
+	margin-top:60px;
+}
+
+	.template-pagination>ul
+	{
+		margin:0px;
+		padding:0px;
+		list-style:none;
+	}
+
+		.template-pagination>ul>li
+		{
+			float:left;
+			margin-left:10px;
+			border-width:1px;
+			border-style:solid;
+			display:inline-block;
+		}
+
+		.template-pagination>ul>li:first-child
+		{
+			margin-left:0px;
+		}
+
+			.template-pagination>ul>li>a
+			{
+				width:44px;
+				height:44px;
+				display:block;
+				line-height:43px;
+				text-align:center;
+			}
+
+			.template-pagination>ul>li>a,
+			.template-pagination>ul>li>a:hover
+			{
+				text-decoration:none;
+			}
+
+			.template-pagination>ul>li.template-pagination-button-prev>a,
+			.template-pagination>ul>li.template-pagination-button-next>a
+			{
+				padding-left:10px;
+				font-size:24px;
+			}
+
+		.template-pagination>ul>li.template-pagination-button-prev
+		{
+			-moz-transform: scaleX(-1);
+			-webkit-transform: scaleX(-1);
+			-o-transform: scaleX(-1);
+			transform:scaleX(-1);
+			-ms-filter:fliph;
+			filter:fliph;
+		}
+
+		.template-pagination>ul>li.template-pagination-button-next
+		{
+			float:right;
+		}
+
+/******************************************************************************/
+/* Qtip																		  */
+/******************************************************************************/
+
+.template-qtip.qtip
+{
+	border:none;
+	outline:none;
+	font-size:13px;
+	max-width:300px;
+	box-shadow:none;
+}
+
+.template-qtip.qtip .qtip-content
+{
+	line-height:150%;
+	padding:10px 20px 10px 20px;
+}
+
+.template-qtip.qtip.qtip-shadow
+{
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+
+/******************************************************************************/
+/*	Fancybox																  */
+/******************************************************************************/
+
+.fancybox-skin,
+#fancybox-buttons ul
+{
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius:0px;
+}
+
+#fancybox-buttons
+{
+	z-index:100001;
+}
+
+#fancybox-buttons ul
+{
+	width:161px;
+	border:none;
+	box-shadow:none;
+	background:rgba(0,0,0,0.5);
+}
+
+#fancybox-buttons a.btnNext,
+#fancybox-buttons a.btnClose,
+#fancybox-buttons a.btnToggle
+{
+	border:none;
+}
+
+#fancybox-buttons li
+{
+	background-image:none;
+}
+
+.fancybox-overlay
+{
+	z-index:100000;
+}
+
+.fancybox-opened
+{
+	z-index:100001;
+}
+
+/******************************************************************************/
+/* Datetime picker															  */
+/******************************************************************************/
+
+.dtpicker-content
+{
+	padding:30px;
+}
+
+.dtpicker-header .dtpicker-title
+{
+	display:none;
+}
+
+.dtpicker-header,
+.dtpicker-components,
+.dtpicker-buttonCont
+{
+	margin-left:0px;
+	margin-right:0px;
+}
+
+.dtpicker-components
+{
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+	.dtpicker-components .dtpicker-compButton
+	{
+		height:auto;
+		font-weight:300;
+		font-size:15px;
+		border-width:1px;
+		line-height:30px;
+		border-style:solid;
+	}
+
+	.dtpicker-components .dtpicker-compButton,
+	.dtpicker-components .dtpicker-compButton:hover,
+	.dtpicker-buttonCont .dtpicker-button,
+	.dtpicker-buttonCont .dtpicker-button:hover
+	{
+		text-decoration:none;
+	}
+
+.dtpicker-buttonCont
+{
+	text-align:center;
+}
+
+	.dtpicker-buttonCont .dtpicker-button
+	{
+		width:30%;
+		float:none;
+		border-width:2px;
+		border-style:solid;
+		display:inline-block;
+		margin:0px 10px 0px 10px;
+	}
+
+/******************************************************************************/
+/* Revolution slider														  */
+/******************************************************************************/
+
+.rev_slider_wrapper
+{
+	width:100%;
+	height:750px;
+	position:relative;
+}
+
+.tparrows.preview1
+{
+	width:40px;
+	height:100px;
+	background:none;
+}
+
+.tparrows.preview1::before
+{
+	content:"";
+}
+
+.tparrows.preview1::after
+{
+	top:0px;
+	left:0px;
+	z-index:2;
+	width:40px;
+	height:100px;
+	font-size:24px;
+	position:absolute;
+	text-align:center;
+	line-height:100px;
+	font-family:"template-icon-meta" !important;
+	-webkit-transition:background 0.2s, color 0.2s;
+	-moz-transition:background 0.2s, color 0.2s;
+	transition:background 0.2s, color 0.2s;
+}
+
+.tp-rightarrow.preview1::after,
+.tp-leftarrow.preview1::after
+{
+	content:'a';
+}
+
+.tp-leftarrow.preview1::after
+{
+	-moz-transform:scaleX(-1);
+	-webkit-transform:scaleX(-1);
+	-o-transform:scaleX(-1);
+	transform:scaleX(-1);
+	-ms-filter:fliph;
+	filter:fliph;
+}
+
+.tparrows.preview1 .tp-arr-allwrapper
+{
+	display:none;
+}
+
+.tp-bullets.preview1
+{
+	height:12px !important;
+}
+
+.tp-bullets.preview1 .tp-bullet
+{
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	width:11px !important;
+	height:11px !important;
+	border:none !important;
+	margin-right:10px !important;
+	margin-bottom:0px !important;
+}
+
+.tp-bullets.preview1 .tp-bullet:hover,
+.tp-bullets.preview1 .tp-bullet.selected
+{
+	width:11px !important;
+	height:11px !important;
+	border:none !important;
+}
+
+.slotholder
+{
+	transform:translate3d(0px,0px,0px) !important;
+}
+
+/******************************************************************************/
+/* Button animation															  */
+/******************************************************************************/
+
+.template-component-button,
+.template-component-button:hover,
+.template-component-go-to-top,
+.template-component-go-to-top:hover,
+.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-left,
+.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-right,
+.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-left:hover,
+.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-right:hover,
+.template-component-social-icon-list li a,
+.template-component-social-icon-list li a:hover,
+.template-pagination>ul>li,
+.template-pagination>ul>li:hover,
+.template-pagination>ul>li a,
+.template-pagination>ul>li:hover a
+{
+	text-decoration:none;
+	transition:background-color 0.2s ease,border-color 0.2s ease,color 0.2s ease;
+}
+
+.rev_slider_wrapper .template-component-button,
+.rev_slider_wrapper .template-component-button:hover
+{
+	transition:background-color 0.2s ease,border-color 0.2s ease,color 0.2s ease !important;
+}
+
+/******************************************************************************/
+/* Responsive column														  */
+/******************************************************************************/
+
+.template-responsive-column-a
+{
+	float:none !important;
+	clear:both !important;
+	width:100% !important;
+	margin-left:0px !important;
+	margin-right:0px !important;
+	margin-bottom:60px !important;
+}
+
+.template-responsive-column-a.template-margin-bottom-reset
+{
+	margin-bottom:0px !important;
+}
+
+/******************************************************************************/
+/* Component																  */
+/******************************************************************************/
+
+	/**************************************************************************/
+	/* Component / Accordion												  */
+	/**************************************************************************/
+
+	.template-component-accordion
+	{
+		visibility:hidden;
+	}
+
+		/**********************************************************************/
+		/* Component / Accordion / Header									  */
+		/**********************************************************************/
+
+		.template-component-accordion.ui-accordion .ui-accordion-header
+		{
+			height:100%;
+			display:table;
+			padding:0px;
+			overflow:hidden;
+			margin-bottom:20px;
+			vertical-align:middle;
+		}
+
+		.template-component-accordion.ui-accordion .ui-accordion-header.ui-state-active.ui-state-hover>span+span
+		{
+			opacity:1;
+		}
+
+			.template-component-accordion.ui-accordion .ui-accordion-header span.template-icon-meta-arrow-right-12
+			{
+				width:44px;
+				height:44px;
+				font-size:16px;
+				background:none;
+				padding-left:4px;
+				line-height:42px;
+				border-width:1px;
+				text-align:center;
+				border-style:solid;
+				border-radius:999px;
+				display:inline-block;
+			}
+
+			.template-component-accordion.ui-accordion .ui-accordion-header span
+			{
+				vertical-align:middle;
+			}
+
+			.template-component-accordion.ui-accordion .ui-accordion-header span+span
+			{
+				display:table-cell;
+				padding-left:20px;
+			}
+
+		/**********************************************************************/
+		/* Component / Accordion / Content									  */
+		/**********************************************************************/
+
+		.template-component-accordion.ui-accordion .ui-accordion-content
+		{
+			padding:20px 0px 40px 0px;
+		}
+
+			.template-component-accordion.ui-accordion .ui-accordion-content>p:first-child
+			{
+				padding-top:0px;
+			}
+
+			.template-component-accordion.ui-accordion .ui-accordion-content>p:last-child
+			{
+				padding-bottom:0px;
+			}
+
+
+	/**************************************************************************/
+	/* Component / Announcement												  */
+	/**************************************************************************/
+
+	.template-component-announcement
+	{
+		padding:40px;
+		border-width:1px;
+		border-style:solid;
+		text-align:center;
+	}
+
+	.template-component-announcement+.template-component-announcement
+	{
+		margin-top:-1px;
+	}
+
+		.template-component-announcement>h3
+		{
+
+		}
+
+		.template-component-announcement>div
+		{
+			font-size:16px;
+		}
+
+		.template-component-announcement>p,
+		.template-component-announcement>a
+		{
+			margin-top:40px;
+		}
+
+		.template-component-announcement>p
+		{
+			padding:0px;
+		}
+
+		.template-component-announcement>a
+		{
+
+		}
+
+	/**************************************************************************/
+	/* Component / Blockquote												  */
+	/**************************************************************************/
+
+	.template-component-blockquote
+	{
+		padding:20px;
+		font-size:18px;
+		font-style:italic;
+		line-height:30px;
+		text-align:center;
+		padding:32px 35px 36px 35px;
+		margin:20px 0px 20px 0px;
+	}
+
+	/**************************************************************************/
+	/* Component / Booking													  */
+	/**************************************************************************/
+
+	.template-component-booking
+	{
+		overflow:hidden;
+	}
+
+		/**********************************************************************/
+		/* Component / Booking / Form										  */
+		/**********************************************************************/
+
+		.template-component-booking>form
+		{
+			margin:0px;
+			padding:0px;
+		}
+
+			.template-component-booking>form>ul
+			{
+				margin:0px;
+				padding:0px;
+				list-style:none;
+			}
+
+				/**************************************************************/
+				/* Component / Booking / Item								  */
+				/**************************************************************/
+
+				.template-component-booking>form>ul>li
+				{
+					margin-bottom:60px;
+				}
+
+				.template-component-booking>form>ul>li:first-child+li
+				{
+					margin-bottom:50px;
+				}
+
+				.template-component-booking>form>ul>li:first-child+li+li+li
+				{
+					margin-bottom:0px;
+				}
+
+				.template-component-booking.template-component-booking-style-2>form>ul>li
+				{
+					margin-bottom:30px;
+				}
+
+				.template-component-booking.template-component-booking-style-2>form>ul>li+li
+				{
+					margin-bottom:0px;
+				}
+
+					/**********************************************************/
+					/* Component / Booking / Item / Header					  */
+					/**********************************************************/
+
+					.template-component-booking .template-component-booking-item-header
+					{
+
+					}
+
+						.template-component-booking .template-component-booking-item-header>span
+						{
+							float:left;
+							width:80px;
+							height:80px;
+							padding:3px;
+							line-height:80px;
+							text-align:center;
+							border-radius:100%;
+						}
+
+							.template-component-booking .template-component-booking-item-header>span>span
+							{
+								font-size:28px;
+							}
+
+							.template-component-booking .template-component-booking-item-header>span>span+span
+							{
+								font-size:18px;
+							}
+
+							.template-component-booking .template-component-booking-item-header>h3,
+							.template-component-booking .template-component-booking-item-header>h5
+							{
+								margin:0px 0px 0px 110px;
+							}
+
+							.template-component-booking .template-component-booking-item-header>h3
+							{
+
+							}
+
+							.template-component-booking .template-component-booking-item-header>h5
+							{
+								font-size:16px;
+								font-weight:400;
+								line-height:28px;
+								letter-spacing:0px;
+								text-transform:none;
+								font-style:italic;
+								margin-top:5px;
+							}
+
+					/**********************************************************/
+					/* Component / Booking / Item / Content					  */
+					/**********************************************************/
+
+					.template-component-booking .template-component-booking-item-content
+					{
+						margin-top:50px;
+					}
+
+		/**********************************************************************/
+		/* Component / Booking / Vehicle list								  */
+		/**********************************************************************/
+
+		.template-component-booking .template-component-booking-vehicle-list
+		{
+			display:flex;
+			flex-wrap:wrap;
+			flex-direction:row;
+			align-items:flex-start;
+			margin:0px -6px -12px -6px;
+		}
+
+			.template-component-booking .template-component-booking-vehicle-list>li
+			{
+				flex-grow:1;
+				flex-basis:140px;
+				height:147px;
+				cursor:pointer;
+				padding-top:25px;
+				text-align:center;
+				border-width:0px 0px 1px 0px;
+				border-style:solid;
+				margin:0px 6px 12px 6px;
+			}
+
+			.template-component-booking.template-component-booking-style-2 .template-component-booking-vehicle-list>li
+			{
+				height:auto;
+				padding:10px 0px 10px 0px;
+			}
+
+			.template-component-booking .template-component-booking-vehicle-list>li:only-child
+			{
+				flex-grow:0.1;
+			}
+
+			.template-component-booking .template-component-booking-vehicle-list>li
+			{
+				float:left \9;
+				width:185px \9;
+			}
+
+				.template-component-booking .template-component-booking-vehicle-list>li>div
+				{
+
+				}
+
+					.template-component-booking .template-component-booking-vehicle-list>li>div>div
+					{
+
+					}
+
+					.template-component-booking .template-component-booking-vehicle-list>li>div>div
+					{
+
+					}
+
+					.template-component-booking .template-component-booking-vehicle-list>li>div>div+div
+					{
+
+					}
+
+		/**********************************************************************/
+		/* Component / Booking / Package list								  */
+		/**********************************************************************/
+
+		.template-component-booking .template-component-booking-package-list
+		{
+			display:flex;
+			flex-wrap:wrap;
+			flex-direction:row;
+			align-items:stretch;
+			margin:0px -15px 0px -15px;
+		}
+
+			.template-component-booking .template-component-booking-package-list>li
+			{
+				flex-grow:1;
+				flex-basis:210px;
+				text-align:center;
+				border-width:1px;
+				border-style:solid;
+				position:relative;
+				margin:0px 15px 30px 15px;
+				padding:25px 20px 75px 20px;
+			}
+
+			.template-component-booking .template-component-booking-package-list>li
+			{
+				float:left \9;
+				width:270px \9;
+			}
+
+				.template-component-booking .template-component-booking-package-list>li>.template-component-booking-package-name
+				{
+					margin-top:0px;
+					margin-bottom:20px;
+				}
+
+				.template-component-booking .template-component-booking-package-list>li>.template-component-booking-package-price
+				{
+					margin-bottom:30px;
+				}
+
+					.template-component-booking .template-component-booking-package-list>li>.template-component-booking-package-price>span
+					{
+						line-height:1;
+					}
+
+					.template-component-booking .template-component-booking-package-list>li>.template-component-booking-package-price>span.template-component-booking-package-price-total
+					{
+						top:0px;
+						font-size:64px;
+						font-weight:300;
+						position:relative;
+					}
+
+					.template-component-booking .template-component-booking-package-list>li>.template-component-booking-package-price>span.template-component-booking-package-price-currency,
+					.template-component-booking .template-component-booking-package-list>li>.template-component-booking-package-price>span.template-component-booking-package-price-decimal
+					{
+						top:-28px;
+						font-size:24px;
+						font-weight:400;
+						position:relative;
+					}
+
+				.template-component-booking .template-component-booking-package-list>li>.template-component-booking-package-duration
+				{
+					line-height:1;
+					border-style:solid;
+					margin-bottom:30px;
+					padding:15px 0px 15px 0px;
+					border-width:1px 0px 1px 0px;
+				}
+
+				.template-component-booking .template-component-booking-package-list>li>.template-component-booking-package-service-list
+				{
+					margin-bottom:30px;
+				}
+
+					.template-component-booking .template-component-booking-package-list>li>.template-component-booking-package-service-list>li
+					{
+						clear:both;
+					}
+
+				.template-component-booking .template-component-booking-package-list>li>div.template-component-button-box
+				{
+					left:0px;
+					width:100%;
+					bottom:30px;
+					text-align:center;
+					position:absolute;
+				}
+
+		/**********************************************************************/
+		/* Component / Booking / Service list								  */
+		/**********************************************************************/
+
+		.template-component-booking-service-list
+		{
+
+		}
+
+			.template-component-booking-service-list>li
+			{
+				width:100%;
+				display:table;
+				margin-top:-1px;
+				border-width:1px;
+				border-style:solid;
+				box-sizing:border-box;
+				padding:12px 20px 12px 20px;
+			}
+
+			.template-component-booking-service-list>li:first-child
+			{
+				margin-top:0px;
+			}
+
+				.template-component-booking-service-list>li>div
+				{
+					text-align:left;
+					display:table-cell;
+					vertical-align:middle;
+				}
+
+					.template-component-booking-service-list>li>div.template-component-booking-service-name
+					{
+						width:55%;
+					}
+
+					.template-component-booking.template-component-booking-style-2 .template-component-booking-service-list>li>div.template-component-booking-service-name
+					{
+						width:70%;
+					}
+
+						.template-component-booking-service-list>li>div.template-component-booking-service-name .template-component-more-content
+						{
+							clear:both;
+							display:none;
+							margin-top:5px;
+							font-size:14px;
+							padding-right:20px;
+						}
+
+					.template-component-booking-service-list>li>div.template-component-booking-service-duration
+					{
+						width:15%;
+					}
+
+					.template-component-booking-service-list>li>div.template-component-booking-service-price
+					{
+						width:15%;
+					}
+
+					.template-component-booking-service-list>li>div.template-component-button-box
+					{
+						width:15%;
+					}
+
+					.template-component-booking-service-list>li>div.template-component-button-box>.template-component-button
+					{
+						float:right;
+					}
+
+			.template-width-0 .template-component-booking-service-list>li>*,
+			.template-width-300 .template-component-booking-service-list>li>*,
+			.template-width-480 .template-component-booking-service-list>li>*,
+			.template-width-0 .template-component-booking-service-list>li,
+			.template-width-300 .template-component-booking-service-list>li,
+			.template-width-480 .template-component-booking-service-list>li
+			{
+				text-align:center;
+			}
+
+			.template-width-0 .template-component-booking-service-list>li>div.template-component-booking-service-name,
+			.template-width-300 .template-component-booking-service-list>li>div.template-component-booking-service-name,
+			.template-width-480 .template-component-booking-service-list>li>div.template-component-booking-service-name,
+			.template-width-0.template-component-booking-style-2 .template-component-booking-service-list>li>div.template-component-booking-service-name,
+			.template-width-300.template-component-booking-style-2 .template-component-booking-service-list>li>div.template-component-booking-service-name,
+			.template-width-480.template-component-booking-style-2 .template-component-booking-service-list>li>div.template-component-booking-service-name
+			{
+				width:100%;
+				display:block;
+				margin-bottom:10px;
+			}
+
+				.template-width-0 .template-component-booking-service-list>li>div.template-component-booking-service-namee>div.template-component-more-content,
+				.template-width-300 .template-component-booking-service-list>li>div.template-component-booking-service-name>div.template-component-more-content,
+				.template-width-480 .template-component-booking-service-list>li>div.template-component-booking-service-name>div.template-component-more-content
+				{
+					padding-right:0px;
+					margin-top:10px;
+				}
+
+			.template-width-0 .template-component-booking-service-list>li>div.template-component-booking-service-duration,
+			.template-width-300 .template-component-booking-service-list>li>div.template-component-booking-service-duration,
+			.template-width-480 .template-component-booking-service-list>li>div.template-component-booking-service-duration
+			{
+				clear:both;
+				margin-right:10px;
+			}
+
+			.template-width-0 .template-component-booking-service-list>li>div.template-component-booking-service-duration,
+			.template-width-300 .template-component-booking-service-list>li>div.template-component-booking-service-duration,
+			.template-width-480 .template-component-booking-service-list>li>div.template-component-booking-service-duration,
+			.template-width-0 .template-component-booking-service-list>li>div.template-component-booking-service-price,
+			.template-width-300 .template-component-booking-service-list>li>div.template-component-booking-service-price,
+			.template-width-480 .template-component-booking-service-list>li>div.template-component-booking-service-price
+			{
+				width:auto;
+				display:inline-block;
+			}
+
+			.template-width-0 .template-component-booking-service-list>li>.template-component-button-box,
+			.template-width-300 .template-component-booking-service-list>li>.template-component-button-box,
+			.template-width-480 .template-component-booking-service-list>li>.template-component-button-box
+			{
+				clear:both;
+				float:none;
+				margin-top:20px;
+				display:inherit;
+				margin-left:auto;
+				margin-right:auto;
+			}
+
+		/**********************************************************************/
+		/* Component / Booking / Summary									  */
+		/**********************************************************************/
+
+		.template-component-booking .template-component-booking-summary
+		{
+
+		}
+
+			.template-component-booking .template-component-booking-summary>li
+			{
+				float:left;
+				width:100%;
+				text-align:right;
+				border-width:1px;
+				border-style:solid;
+				margin-bottom:30px;
+				padding:35px 30px 30px 30px;
+			}
+
+			.template-width-0 .template-component-booking-summary>li,
+			.template-width-480 .template-component-booking-summary>li,
+			.template-width-300 .template-component-booking-summary>li
+			{
+				width:100%;
+				float:none !important;
+			}
+
+			.cbs-main.cbs-width-0 .template-component-booking .template-component-booking-summary>li,
+			.cbs-main.cbs-width-480 .template-component-booking .template-component-booking-summary>li,
+			.cbs-main.cbs-width-300 .template-component-booking .template-component-booking-summary>li
+			{
+				width:100%;
+				float:none !important;
+			}
+
+			.template-component-booking .template-component-booking-summary>li.template-component-booking-summary-duration
+			{
+				float:left;
+			}
+
+			.template-component-booking .template-component-booking-summary>li.template-component-booking-summary-price
+			{
+				float:right;
+			}
+
+				.template-component-booking .template-component-booking-summary>li>h5
+				{
+					margin:-10px 0px 0px 0px;
+				}
+
+				.template-component-booking .template-component-booking-summary>li>h5,
+				.template-component-booking .template-component-booking-summary>li>h5>span
+				{
+					font-size:24px;
+				}
+
+				.template-component-booking .template-component-booking-summary>li>span
+				{
+
+				}
+
+				.template-component-booking .template-component-booking-summary>li>div
+				{
+					float:left;
+				}
+
+	/**************************************************************************/
+	/* Component / Button													  */
+	/**************************************************************************/
+
+	.template-component-button,
+	.template-component-button+.blockUI+.blockUI.blockOverlay
+	{
+		border-radius:999px;
+	}
+
+	.template-component-button
+	{
+		position:relative;
+		border-width:2px;
+		border-style:solid;
+		display:inline-block;
+		padding:16px 38px 16px 38px;
+	}
+
+	.template-component-button,
+	.template-component-button:hover
+	{
+		text-decoration:none;
+	}
+
+	.template-state-selected .template-component-button:before
+	{
+		transition:padding-right 100ms ease,opacity 200ms ease 100ms;
+	}
+
+	.template-component-button:before
+	{
+		opacity:0;
+		right:25px;
+		position:absolute;
+	}
+
+	.template-state-selected .template-component-button
+	{
+		padding-right:50px;
+	}
+
+	.template-state-selected .template-component-button:before
+	{
+		opacity:1;
+	}
+
+	.template-component-button,
+	.template-component-button>*
+	{
+		line-height:1;
+	}
+
+	/**************************************************************************/
+	/* Component / Call to action											  */
+	/**************************************************************************/
+
+	.template-component-call-to-action
+	{
+
+	}
+
+		.template-component-call-to-action>div
+		{
+			text-align:center;
+			padding:40px 0px 40px 0px;
+		}
+
+			.template-component-call-to-action>div>h3,
+			.template-component-call-to-action>div>a.template-component-button
+			{
+				display:inline-block;
+				margin:10px 20px 10px 20px;
+			}
+
+			.template-component-call-to-action>div>h3
+			{
+
+			}
+
+			.template-component-call-to-action>div>a.template-component-button
+			{
+
+			}
+
+	/**************************************************************************/
+	/* Component / Contact form												  */
+	/**************************************************************************/
+
+	.template-component-contact-form
+	{
+
+	}
+
+		.template-component-contact-form textarea
+		{
+			height:273px;
+			height:244px\0;
+		}
+
+		.template-layout-flex .template-component-contact-form textarea
+		{
+			height:272px;
+			height:243px\0;
+		}
+
+	/**************************************************************************/
+	/* Component / Comment form												  */
+	/**************************************************************************/
+
+	.template-component-comment-form
+	{
+
+	}
+
+		.template-component-comment-form textarea
+		{
+			height:273px;
+			height:244px\0;
+		}
+
+	/**************************************************************************/
+	/* Component / Counter bar list											  */
+	/**************************************************************************/
+
+	.template-component-counter-bar-list
+	{
+
+	}
+
+		.template-component-counter-bar-list>ul
+		{
+			margin:0px;
+			padding:0px;
+			list-style-type:none;
+		}
+
+			.template-component-counter-bar-list>ul>li
+			{
+				margin-bottom:30px;
+			}
+
+				.template-component-counter-bar-list>ul>li>h6
+				{
+					margin-bottom:20px;
+					display:inline-block;
+				}
+
+				.template-component-counter-bar-list>ul>li>span
+				{
+					float:right;
+					display:none;
+				}
+
+				.template-component-counter-bar-list>ul>li>div
+				{
+					width:100%;
+					height:10px;
+					position:relative;
+				}
+
+					.template-component-counter-bar-list>ul>li>div>div
+					{
+						width:0%;
+						height:inherit;
+						position:absolute;
+					}
+
+	/**************************************************************************/
+	/* Component / Counter box list											  */
+	/**************************************************************************/
+
+	.template-component-counter-box-list
+	{
+
+	}
+
+		.template-component-counter-box-list>ul
+		{
+			margin:0px;
+			padding:0px;
+			list-style:none;
+		}
+
+			.template-component-counter-box-list>ul>li
+			{
+				text-align:center;
+				padding:120px 0px 120px 0px;
+			}
+
+			.template-component-counter-box-list>ul>li.template-responsive-column-a
+			{
+				padding-top:30px;
+				padding-bottom:30px;
+				margin-bottom:0px !important;
+			}
+
+				.template-component-counter-box-list>ul>li>span
+				{
+					margin-left:20px;
+					display:inline-block;
+				}
+
+				.template-component-counter-box-list>ul>li>span.template-value
+				{
+					font-size:64px;
+					font-weight:300;
+					margin-left:0px;
+					line-height:64px;
+					letter-spacing:0px;
+				}
+
+				.template-component-counter-box-list>ul>li>h6
+				{
+					margin-top:30px;
+					margin-bottom:0px;
+				}
+
+	/**************************************************************************/
+	/* Component / Divider													  */
+	/**************************************************************************/
+
+	.template-component-divider
+	{
+		height:1px;
+		width:100%;
+		font-size:0px;
+	}
+
+	/**************************************************************************/
+	/* Component / Feature list												  */
+	/**************************************************************************/
+
+	.template-component-feature-list
+	{
+
+	}
+
+		.template-component-feature-list>ul
+		{
+
+		}
+
+			.template-component-feature-list>ul>li
+			{
+
+			}
+
+				.template-component-feature-list>ul>li>span
+				{
+
+				}
+
+				.template-component-feature-list>ul>li>h5
+				{
+					margin-top:0px;
+					margin-bottom:20px;
+				}
+
+				.template-component-feature-list>ul>li>p
+				{
+					padding:0px;
+				}
+
+				/**************************************************************/
+				/* Component / Feature list / Top							  */
+				/**************************************************************/
+
+				.template-component-feature-list.template-component-feature-list-position-top>ul>li>h5
+				{
+					margin-top:30px;
+				}
+
+				/**************************************************************/
+				/* Component / Feature list	/ Right							  */
+				/**************************************************************/
+
+				.template-component-feature-list.template-component-feature-list-position-right>ul>li>span
+				{
+					float:right;
+				}
+
+				.template-component-feature-list.template-component-feature-list-position-right>ul>li>h5,
+				.template-component-feature-list.template-component-feature-list-position-right>ul>li>p
+				{
+					margin-right:90px;
+					text-align:right;
+				}
+
+				/**************************************************************/
+				/* Component / Feature list	/ Left							  */
+				/**************************************************************/
+
+				.template-component-feature-list.template-component-feature-list-position-left>ul>li>span
+				{
+					float:left;
+				}
+
+				.template-component-feature-list.template-component-feature-list-position-left>ul>li>h5,
+				.template-component-feature-list.template-component-feature-list-position-left>ul>li>p
+				{
+					margin-left:90px;
+					text-align:left;
+				}
+
+	/**************************************************************************/
+	/* Component / Gallery													  */
+	/**************************************************************************/
+
+	.template-component-gallery
+	{
+
+	}
+
+		/**********************************************************************/
+		/* Component / Gallery / Filter list								  */
+		/**********************************************************************/
+
+		.template-component-gallery .template-component-gallery-filter-list
+		{
+			text-align:center;
+			margin-bottom:60px;
+		}
+
+			.template-component-gallery .template-component-gallery-filter-list>li
+			{
+				margin-right:10px;
+				display:inline-block;
+			}
+
+				.template-component-gallery .template-component-gallery-filter-list>li>a
+				{
+					display:block;
+					min-width:130px;
+					border-style:solid;
+					padding:12px 15px 11px 15px;
+					border-width:0px 0px 1px 0px;
+				}
+
+				.template-component-gallery .template-component-gallery-filter-list>li>a,
+				.template-component-gallery .template-component-gallery-filter-list>li>a:hover
+				{
+					text-decoration:none;
+				}
+
+		/**********************************************************************/
+		/* Component / Gallery / Image list									  */
+		/**********************************************************************/
+
+		.template-component-gallery .template-component-gallery-image-list
+		{
+			transition:all 0.4s ease 0s;
+		}
+
+			.template-component-gallery .template-component-gallery-image-list>li
+			{
+				width:100%;
+				margin-bottom:60px;
+			}
+
+			.template-component-gallery .template-component-gallery-image-list>li.template-component-gallery-image-list-width-2
+			{
+
+			}
+
+				.template-component-gallery .template-component-gallery-image-list>li a,
+				.template-component-gallery .template-component-gallery-image-list>li a img
+				{
+					display:block;
+				}
+
+	/**************************************************************************/
+	/* Component / Go to top												  */
+	/**************************************************************************/
+
+	.template-component-go-to-top
+	{
+		opacity:0;
+		z-index:2;
+		right:40px;
+		bottom:40px;
+		width:50px;
+		height:50px;
+		font-size:24px;
+		position:fixed;
+		line-height:46px;
+		text-align:center;
+		border-radius:999px;
+	}
+
+	.template-component-go-to-top,
+	.template-component-go-to-top:hover
+	{
+		text-decoration:none;
+	}
+
+	/**************************************************************************/
+	/* Component / Google maps												  */
+	/**************************************************************************/
+
+	.template-component-google-map
+	{
+		display:none;
+		height:100%;
+	}
+
+		.template-component-google-map .template-component-google-map-box
+		{
+			height:0px;
+			overflow:hidden;
+		}
+
+			.template-component-google-map .template-component-google-map-box-content
+			{
+
+			}
+
+		.template-component-google-map .template-component-google-map-button
+		{
+			width:100%;
+			display:block;
+			line-height:25px;
+			text-align:center;
+			letter-spacing:1px;
+			text-transform:uppercase;
+			padding:20px 0px 20px 0px;
+		}
+
+		.template-component-google-map .template-component-google-map-button,
+		.template-component-google-map .template-component-google-map-button:hover
+		{
+			text-decoration:none;
+		}
+
+			.template-component-google-map .template-component-google-map-button span
+			{
+				display:block;
+			}
+
+			.template-component-google-map .template-component-google-map-button .template-icon-meta-marker
+			{
+				font-size:18px;
+				margin-bottom:5px;
+			}
+
+			.template-component-google-map .template-component-google-map-button .template-component-google-map-button-label-show
+			{
+				display:block;
+			}
+
+			.template-component-google-map .template-component-google-map-button .template-component-google-map-button-label-hide,
+			.template-component-google-map.template-state-open .template-component-google-map-button .template-component-google-map-button-label-show
+			{
+				display:none;
+			}
+
+			.template-component-google-map.template-state-open .template-component-google-map-button .template-component-google-map-button-label-hide
+			{
+				display:block;
+			}
+
+	/**************************************************************************/
+	/* Component / Header + subheader										  */
+	/**************************************************************************/
+
+	.template-component-header-subheader
+	{
+		text-align:center;
+		margin-bottom:40px;
+	}
+
+		.template-component-header-subheader>h2
+		{
+
+		}
+
+		.template-component-header-subheader>h4
+		{
+			margin-bottom:0px;
+		}
+
+		.template-component-header-subheader>div
+		{
+			width:60px;
+			height:2px;
+			font-size:0px;
+			margin-top:25px;
+			display:inline-block;
+		}
+
+		.template-component-header-subheader>h4+div
+		{
+			margin-top:15px;
+		}
+
+		.template-component-header-subheader>span
+		{
+			display:block;
+			font-size:16px;
+			font-weight:400;
+			margin-top:15px;
+			line-height:28px;
+			font-style:italic;
+		}
+
+	/**************************************************************************/
+	/* Component / Image													  */
+	/**************************************************************************/
+
+	.template-component-image
+	{
+		position:relative;
+	}
+
+	.template-component-image.template-component-image-preloader
+	{
+		min-height:100px;
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-image:url('../media/image/preloader.gif');
+	}
+
+		.template-component-image.template-component-image-preloader>*
+		{
+			opacity:0;
+		}
+
+		.template-component-image .template-component-image-description
+		{
+			display:none;
+		}
+
+		.template-component-image .template-component-image-hover,
+		.template-component-image .template-component-image-hover>span
+		{
+			top:0px;
+			width:100%;
+			height:100%;
+			display:block;
+			position:absolute;
+		}
+
+		.template-component-image .template-component-image-hover
+		{
+			opacity:0;
+			display:block;
+			cursor:pointer;
+		}
+
+		.template-component-image:hover .template-component-image-hover
+		{
+			opacity:1;
+		}
+
+		.template-component-image .template-component-image-hover,
+		.template-component-image:hover .template-component-image-hover
+		{
+			transition:all 0.3s ease;
+		}
+
+			.template-component-image .template-component-image-hover>span
+			{
+				display:table;
+			}
+
+				.template-component-image .template-component-image-hover>span>span
+				{
+					display:table-cell;
+					vertical-align:middle;
+				}
+
+					.template-component-image .template-component-image-hover>span>span>span.template-component-image-hover-header,
+					.template-component-image .template-component-image-hover>span>span>span.template-component-image-hover-subheader
+					{
+						display:block;
+						text-align:center;
+						margin:auto 40px auto 40px;
+					}
+
+					.template-component-image .template-component-image-hover>span>span>span.template-component-image-hover-header
+					{
+						font-weight:900;
+						margin-bottom:0px;
+					}
+
+					.template-component-image .template-component-image-hover>span>span>span.template-component-image-hover-divider
+					{
+						height:1px;
+						width:30px;
+						display:block;
+						margin-left:auto;
+						margin-right:auto;
+						margin-top:20px;
+					}
+
+					.template-component-image .template-component-image-hover>span>span>span.template-component-image-hover-subheader
+					{
+						padding:0px;
+						margin-top:20px;
+					}
+
+	/**************************************************************************/
+	/* Component / Italics													  */
+	/**************************************************************************/
+
+	.template-component-italic
+	{
+		font-size:18px;
+		font-weight:400;
+		line-height:30px;
+		font-style:italic;
+		letter-spacing:0px;
+	}
+
+	/**************************************************************************/
+	/* Component / List														  */
+	/**************************************************************************/
+
+	.template-component-list
+	{
+		margin:0px;
+		padding:0px;
+		list-style:none;
+	}
+
+		.template-component-list li
+		{
+			clear:both;
+			position:relative;
+			margin-bottom:5px;
+			padding-left:30px;
+		}
+
+		.template-component-list li:last-child
+		{
+			margin-bottom:0px;
+		}
+
+			.template-component-list li>span:first-child
+			{
+				top:7px;
+				left:0px;
+				position:absolute;
+			}
+
+	/**************************************************************************/
+	/* Component / Menu														  */
+	/**************************************************************************/
+
+		/**********************************************************************/
+		/* Component / Menu	/ Default										  */
+		/**********************************************************************/
+
+		.template-component-menu-default
+		{
+			display:block;
+			text-align:center;
+		}
+
+			.template-component-menu-default>.sf-menu
+			{
+				float:none;
+				display:inline-block;
+			}
+
+				.template-component-menu-default>.sf-menu>li
+				{
+
+				}
+
+					.template-component-menu-default>.sf-menu>li a
+					{
+						display:block;
+					}
+
+					.template-component-menu-default>.sf-menu>li a,
+					.template-component-menu-default>.sf-menu>li a:hover
+					{
+						text-decoration:none;
+					}
+
+					.template-component-menu-default>.sf-menu>li>a
+					{
+						font-size:15px;
+						line-height:28px;
+						letter-spacing:1px;
+						text-transform:uppercase;
+						padding:36px 20px 36px 20px;
+					}
+
+						.template-component-menu-default>.sf-menu>li ul
+						{
+							left:25px;
+							width:300px;
+							margin-top:-10px;
+							padding:19px 25px 19px 25px;
+						}
+
+							.template-component-menu-default>.sf-menu>li ul li a
+							{
+								text-align:left;
+								letter-spacing:0px;
+								display:block;
+								overflow:hidden;
+								padding:6px 0px 6px 0px;
+							}
+
+								.template-component-menu-default>.sf-menu>li ul li a span
+								{
+									display:inline;
+									font-size:11px;
+									margin-left:-21px;
+									padding-right:10px;
+								}
+
+								.template-component-menu-default>.sf-menu>li ul li a:hover span,
+								.template-component-menu-default>.sf-menu>li ul li a.template-state-selected span
+								{
+									margin-left:0px;
+								}
+
+								.template-component-menu-default>.sf-menu>li ul li a,
+								.template-component-menu-default>.sf-menu>li ul li a span,
+								.template-component-menu-default>.sf-menu>li ul li a:hover,
+								.template-component-menu-default>.sf-menu>li ul li a:hover span
+								{
+									transition:color 0.2s ease, margin-left 0.2s ease;
+								}
+
+		/**********************************************************************/
+		/* Component / Menu	/ Responsive									  */
+		/**********************************************************************/
+
+		.template-component-menu-responsive
+		{
+			left:0px;
+			width:100%;
+			height:100%;
+			top:-9999em;
+			display:block;
+			position:fixed;
+			z-index:100005;
+		}
+
+			.template-component-menu-responsive.template-state-open>ul
+			{
+				box-shadow:0px 1px 5px 0px rgba(0,0,0,0.1);
+			}
+
+	/**************************************************************************/
+	/* Component / More link												  */
+	/**************************************************************************/
+
+	.template-component-more-link
+	{
+
+	}
+
+		.template-component-more-link>span
+		{
+
+		}
+
+		.template-component-more-link>span+span
+		{
+			display:none;
+		}
+
+	.template-component-more-content
+	{
+		display:none;
+	}
+
+	/**************************************************************************/
+	/* Component / Process list												  */
+	/**************************************************************************/
+
+	.template-component-process-list
+	{
+
+	}
+
+		.template-component-process-list>ul
+		{
+			margin:0px;
+			padding:0px;
+			list-style:none;
+		}
+
+			.template-component-process-list>ul>li
+			{
+				position:relative;
+				text-align:center;
+			}
+
+			.template-component-process-list>ul>li.template-responsive-column-a
+			{
+				padding-bottom:120px;
+				margin-bottom:0px !important;
+			}
+
+			.template-component-process-list>ul>li.template-responsive-column-a:last-child
+			{
+				padding-bottom:0px;
+			}
+
+				.template-component-process-list>ul>li>span
+				{
+					border-width:1px;
+					text-align:center;
+					border-style:solid;
+					border-radius:999px;
+					display:inline-block;
+				}
+
+				.template-component-process-list>ul>li>span:first-child
+				{
+					width:108px;
+					height:108px;
+					line-height:108px;
+				}
+
+				.template-component-process-list>ul>li>h5
+				{
+					margin-top:30px;
+					margin-bottom:0px;
+				}
+
+				.template-component-process-list>ul>li>span:last-child
+				{
+					top:32px;
+					right:-22px;
+					width:44px;
+					height:44px;
+					font-size:24px;
+					line-height:40px;
+					position:absolute;
+					padding-left:4px;
+				}
+
+				.template-component-process-list>ul>li.template-responsive-column-a>span:last-child
+				{
+					top:auto;
+					left:0px;
+					right:0px;
+					bottom:44px;
+					margin-left:auto;
+					margin-right:auto;
+					transform:rotate(90deg);
+				}
+
+	/**************************************************************************/
+	/* Component / Recent post												  */
+	/**************************************************************************/
+
+	ul.template-component-recent-post
+	{
+		margin:0px;
+		padding:0px;
+		list-style-type:none;
+	}
+
+		.template-component-recent-post>li
+		{
+			text-align:center;
+		}
+
+			.template-component-recent-post>li>a
+			{
+				padding:30px;
+				display:block;
+				border-style:solid;
+				border-width:0px 0px 1px 0px;
+			}
+
+			.template-component-recent-post>li>a,
+			.template-component-recent-post>li>a:hover
+			{
+				text-decoration:none;
+			}
+
+			.template-component-recent-post>li>a>span
+			{
+				margin-bottom:0px;
+			}
+
+			.template-component-recent-post>li>a>span+span
+			{
+				font-size:14px;
+				line-height:28px;
+				letter-spacing:1px;
+				text-transform:uppercase;
+			}
+
+			.template-component-recent-post>li>a>span+span:before
+			{
+				content:"/";
+				padding:0px 10px 0px 10px;
+			}
+
+			.template-color-white .template-component-recent-post>li>a,
+			.template-color-white .template-component-recent-post>li>a:hover
+			{
+				transition:all 0.2s ease;
+			}
+
+	/**************************************************************************/
+	/* Component / Tab														  */
+	/**************************************************************************/
+
+	.template-component-tab
+	{
+		visibility:hidden;
+	}
+
+		/**********************************************************************/
+		/* Component / Tab / Navigation										  */
+		/**********************************************************************/
+
+		.template-component-tab.ui-tabs .ui-tabs-nav
+		{
+			padding:0px;
+			display:inline-block;
+		}
+
+			.template-component-tab.ui-tabs .ui-tabs-nav li
+			{
+				margin-right:10px;
+				border-style:solid;
+				border-width:0px 0px 1px 0px;
+			}
+
+			.template-component-tab.ui-tabs .ui-tabs-nav li.ui-state-active
+			{
+				margin-bottom:0px;
+				padding-bottom:0px;
+			}
+
+				.template-component-tab.ui-tabs .ui-tabs-nav li a
+				{
+					display:block;
+					min-width:130px;
+					text-align:center;
+					padding:12px 15px 11px 15px;
+				}
+
+		/**********************************************************************/
+		/* Component / Tab / Panel											  */
+		/**********************************************************************/
+
+		.template-component-tab.ui-tabs .ui-tabs-panel
+		{
+			padding:0px;
+			margin:60px 0px 0px 0px;
+		}
+
+	/**************************************************************************/
+	/* Component / Team list												  */
+	/**************************************************************************/
+
+	.template-component-team-list
+	{
+
+	}
+
+		.template-component-team-list>ul
+		{
+			margin:0px;
+			padding:0px;
+			list-style-type:none;
+		}
+
+			.template-component-team-list>ul>li
+			{
+
+			}
+
+				.template-component-team-list>ul>li>.template-component-team-list-image
+				{
+					display:block;
+				}
+
+				.template-component-team-list>ul>li>.template-component-team-list-name
+				{
+					margin-top:20px;
+					margin-bottom:0px;
+				}
+
+				.template-component-team-list>ul>li>.template-component-team-list-position
+				{
+					font-size:16px;
+					font-weight:400;
+					line-height:28px;
+					font-style:italic;
+				}
+
+				.template-component-team-list>ul>li>.template-component-team-list-divider
+				{
+					width:60px;
+					margin-top:25px;
+				}
+
+				.template-component-team-list>ul>li>.template-component-team-list-description
+				{
+					padding:0px;
+					margin-top:25px;
+				}
+
+				.template-component-team-list>ul>li>.template-component-social-icon-list
+				{
+					margin-top:25px;
+				}
+
+	/**************************************************************************/
+	/* Component / Search form												  */
+	/**************************************************************************/
+
+	body>.template-component-search-form
+	{
+		top:0px;
+		left:0px;
+		opacity:0;
+		width:100%;
+		height:100%;
+		display:none;
+		z-index:99999;
+		position:fixed;
+	}
+
+		body>.template-component-search-form>div,
+		body>.template-component-search-form>form
+		{
+			position:absolute;
+		}
+
+		body>.template-component-search-form>div
+		{
+			top:0px;
+			left:0px;
+			z-index:1;
+			width:100%;
+			height:100%;
+		}
+
+		body>.template-component-search-form>form
+		{
+			top:50%;
+			left:50%;
+			z-index:2;
+
+			transform:translate(-50%,-50%);
+		}
+
+			.template-component-search-form>form>div
+			{
+				width:100%;
+				max-width:500px;
+				position:relative;
+				margin-left:auto;
+				margin-right:auto;
+			}
+
+			body>.template-component-search-form>form,
+			body>.template-component-search-form>form>div
+			{
+				width:95%;
+				max-width:500px;
+			}
+
+				.template-component-search-form>form>div>input[type="search"]
+				{
+					z-index:1;
+					position:relative;
+					padding-right:50px;
+				}
+
+				body>.template-component-search-form>form>div>input[type="search"]
+				{
+					text-transform:none;
+					border-width:0px 0px 1px 0px;
+				}
+
+				.template-component-search-form>form>div>span,
+				.template-component-search-form>form>div>input[type="submit"]
+				{
+					position:absolute;
+				}
+
+				.template-component-search-form>form>div>input[type="submit"]
+				{
+					top:0px;
+					z-index:2;
+					right:0px;
+					width:50px;
+					border:none;
+				}
+
+				body>.template-component-search-form>form>div>input[type="submit"]
+				{
+					top:10px;
+				}
+
+				.template-component-search-form>form>div>span
+				{
+					top:16px;
+					z-index:2;
+					right:16px;
+					font-size:18px;
+					cursor:pointer;
+				}
+
+				body>.template-component-search-form>form>div>span
+				{
+					top:19px;
+					font-size:24px;
+				}
+
+	/**************************************************************************/
+	/* Component / Space													  */
+	/**************************************************************************/
+
+	.template-component-space
+	{
+		clear:both;
+	}
+
+		.template-component-space-1
+		{
+			height:30px;
+		}
+
+		.template-component-space-1m
+		{
+			margin-top:-30px;
+		}
+
+		.template-component-space-2
+		{
+			height:60px;
+		}
+
+		.template-component-space-2m
+		{
+			margin-top:-60px;
+		}
+
+		.template-component-space-3
+		{
+			height:90px;
+		}
+
+		.template-component-space-3m
+		{
+			margin-top:-90px;
+		}
+
+		.template-component-space-4
+		{
+			height:120px;
+		}
+
+		.template-component-space-4m
+		{
+			margin-top:-120px;
+		}
+
+	/**************************************************************************/
+	/* Component / Social icon list											  */
+	/**************************************************************************/
+
+	.template-component-social-icon-list
+	{
+		margin:0px;
+		padding:0px;
+		list-style-type:none;
+	}
+
+		.template-component-social-icon-list li
+		{
+			display:inline-block;
+			vertical-align:middle;
+		}
+
+			.template-component-social-icon-list li a
+			{
+				width:46px;
+				height:46px;
+				display:block;
+				line-height:48px;
+				text-decoration:none;
+			}
+
+			.template-component-social-icon-list li a:hover
+			{
+				text-decoration:none;
+			}
+
+			/******************************************************************/
+			/* Component / Social icon list / Style 1						  */
+			/******************************************************************/
+
+			/******************************************************************/
+			/* Component / Social icon list	/ Style 2						  */
+			/******************************************************************/
+
+			/******************************************************************/
+			/* Component / Social icon list	/ Style 3						  */
+			/******************************************************************/
+
+			.template-component-social-icon-list.template-component-social-icon-list-3 li
+			{
+				margin-right:10px;
+			}
+
+				.template-component-social-icon-list.template-component-social-icon-list-3 li a
+				{
+					border-width:1px;
+					border-style:solid;
+					text-align:center;
+					border-radius:9999em;
+				}
+
+	/**************************************************************************/
+	/* Component / Testimonial												  */
+	/**************************************************************************/
+
+	.template-component-testimonial-list
+	{
+		position:relative;
+	}
+
+		.template-component-testimonial-list ul
+		{
+			width:100%;
+			margin:0px;
+			padding:0px;
+			list-style-type:none;
+		}
+
+		.template-component-testimonial-list>.caroufredsel_wrapper
+		{
+			margin-left:auto !important;
+			margin-right:auto !important;
+		}
+
+			.template-component-testimonial-list ul>li
+			{
+				float:left;
+				text-align:center;
+			}
+
+				.template-component-testimonial-list ul>li>p
+				{
+					padding:0px;
+					font-size:18px;
+					line-height:30px;
+					font-style:italic;
+				}
+
+				.template-component-testimonial-list ul>li>h6
+				{
+					margin-top:150px;
+					margin-bottom:0px;
+				}
+
+				.template-component-testimonial-list ul>li>span
+				{
+					display:block;
+					font-size:16px;
+					line-height:28px;
+					font-style:italic;
+				}
+
+		.template-component-testimonial-list .template-component-testimonial-list-navigation
+		{
+			left:0;
+			right:0;
+			bottom:100px;
+			margin-left:auto;
+			margin-right:auto;
+			position:absolute;
+			text-align:center;
+		}
+
+			.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-left,
+			.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-right,
+			.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-left:hover,
+			.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-right:hover
+			{
+				text-decoration:none;
+			}
+
+			.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-left,
+			.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-right
+			{
+				width:44px;
+				height:44px;
+				font-size:24px;
+				line-height:42px;
+				border-style:solid;
+				border-width:1px;
+				border-radius:999px;
+				display:inline-block;
+			}
+
+			.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-left
+			{
+				-moz-transform:scaleX(-1);
+				-webkit-transform:scaleX(-1);
+				-o-transform:scaleX(-1);
+				transform:scaleX(-1);
+			}
+
+			.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-center
+			{
+				top:10px;
+				position:relative;
+				font-size:48px;
+				margin-left:50px;
+				margin-right:50px;
+				display:inline-block;
+			}
+
+			.template-component-testimonial-list .template-component-testimonial-list-navigation .template-component-testimonial-list-navigation-right
+			{
+
+			}
+
+/******************************************************************************/
+/* Page																		  */
+/******************************************************************************/
+
+	/**************************************************************************/
+	/* Page / 404															  */
+	/**************************************************************************/
+
+	.template-page-404
+	{
+
+	}
+
+		.template-page-404 .template-content h1
+		{
+			font-weight:300;
+			font-size:160px;
+			line-height:160px;
+			letter-spacing:0px;
+		}
+
+		.template-page-404 .template-content p
+		{
+			font-size:21px;
+			font-weight:300;
+			line-height:36px;
+		}

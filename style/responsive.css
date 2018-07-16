@@ -1,0 +1,587 @@
+/******************************************************************************/
+/* 0-1459																	  */
+/******************************************************************************/
+
+@media only screen and (min-width:0px) and (max-width:1459px)
+{	
+/******************************************************************************/
+/* Layout																	  */
+/******************************************************************************/
+	
+	/**************************************************************************/
+	/* Layout / Flex														  */
+	/**************************************************************************/
+
+		.template-layout-flex>div
+		{
+			padding-left:80px;
+			padding-right:80px;
+		}	
+		
+/******************************************************************************/
+/* Component																  */
+/******************************************************************************/
+
+	/**************************************************************************/
+	/* Component / Menu														  */
+	/**************************************************************************/
+
+		/**********************************************************************/
+		/* Component / Menu	/ Default										  */	
+		/**********************************************************************/
+		
+					.template-component-menu-default>.sf-menu>li>a
+					{
+						padding-left:10px;
+						padding-right:10px;
+					}
+}
+
+
+
+
+
+/******************************************************************************/
+/* 0-1299																	  */
+/******************************************************************************/
+
+@media only screen and (min-width:0px) and (max-width:1299px)
+{	
+/******************************************************************************/
+/* Template																	  */
+/******************************************************************************/
+
+	/**************************************************************************/
+	/* Template	/ Header													  */
+	/**************************************************************************/
+	
+		/**********************************************************************/
+		/* Template	/ Header / Top											  */
+		/**********************************************************************/
+	
+			/******************************************************************/
+			/* Template	/ Header / Top / Icon list							  */
+			/******************************************************************/
+
+				.template-header .template-header-top .template-header-top-icon-list .template-icon-meta-menu
+				{
+					display:block;
+				}
+				
+/******************************************************************************/
+/* Component																  */
+/******************************************************************************/
+
+	/**************************************************************************/
+	/* Component / Menu														  */
+	/**************************************************************************/
+
+		/**********************************************************************/
+		/* Component / Menu	/ Default										  */
+		/**********************************************************************/
+	
+		.template-component-menu-default
+		{
+			display:none;
+		}
+}
+
+
+
+
+
+/******************************************************************************/
+/* 0-1169																	  */
+/******************************************************************************/
+
+@media only screen and (min-width:0px) and (max-width:1169px)
+{
+/******************************************************************************/
+/* Blog																		  */
+/******************************************************************************/	
+
+	/**************************************************************************/
+	/* Blog	/ Comment List													  */
+	/**************************************************************************/	
+
+			.template-blog-comment-list ul ul
+			{
+				margin-left:0px;
+			}
+}
+
+
+
+
+
+/******************************************************************************/
+/* 0-959																	  */
+/******************************************************************************/
+
+@media only screen and (min-width:0px) and (max-width:959px)
+{
+/******************************************************************************/
+/* Layout																	  */
+/******************************************************************************/
+	
+	/**************************************************************************/
+	/* Layout / Flex														  */
+	/**************************************************************************/
+
+	.template-layout-flex
+	{
+		flex-wrap:wrap;
+	}
+	
+		.template-layout-flex>div
+		{
+			width:100%;
+			flex-basis:100%;
+			min-height:300px;
+			padding-left:60px;
+			padding-right:60px;
+		}	
+
+/******************************************************************************/
+/* Blog																		  */
+/******************************************************************************/
+		
+	/**************************************************************************/
+	/* Blog	/ Excerpt														  */
+	/* Blog	/ Content														  */
+	/**************************************************************************/
+	
+	.template-blog.template-blog-style-2 .template-blog-image
+	{
+		float:none;
+		width:100%;
+	}
+	
+	.template-blog.template-blog-style-2 .template-blog-image + .template-blog-excerpt
+	{
+		margin-left:0px;
+		margin-top:30px;
+	}
+	
+	/**************************************************************************/
+	/* Blog	/ Meta															  */
+	/**************************************************************************/
+		
+	.template-blog .template-blog-meta
+	{
+		width:100%;
+		display:table;
+	}
+	
+		.template-blog .template-blog-meta>div
+		{
+			
+		}
+		
+			.template-blog .template-blog-meta>div>div
+			{
+				clear:both;
+				display:block;
+			}
+			
+			.template-blog .template-blog-meta>div>div+div
+			{
+				margin-top:20px;
+				text-align:left;
+			}
+}
+
+
+
+
+
+/******************************************************************************/
+/* 0-767																	  */
+/******************************************************************************/
+
+@media only screen and (min-width:0px) and (max-width:767px)
+{
+/******************************************************************************/
+/* Template layout															  */
+/******************************************************************************/
+
+	.template-content-layout.template-content-layout-sidebar-left .template-content-layout-column-left,
+	.template-content-layout.template-content-layout-sidebar-left .template-content-layout-column-right,
+	.template-content-layout.template-content-layout-sidebar-right .template-content-layout-column-right,
+	.template-content-layout.template-content-layout-sidebar-right .template-content-layout-column-left
+	{
+		clear:both;
+		float:none;
+		width:100%;
+	}
+	
+	.template-content-layout.template-content-layout-sidebar-right .template-content-layout-column-right
+	{
+		margin-top:120px;
+	}
+	
+	.template-content-layout.template-content-layout-sidebar-left .template-content-layout-column-left
+	{
+		margin-bottom:120px;
+	}
+
+/******************************************************************************/
+/* Template																	  */
+/******************************************************************************/
+
+	/**************************************************************************/
+	/* Template	/ Header													  */
+	/**************************************************************************/
+	
+		/**********************************************************************/
+		/* Template	/ Header / Top											  */
+		/**********************************************************************/
+
+		.template-header .template-header-top.template-header-top-sticky,
+		.template-header .template-header-top.template-header-top-static
+		{
+			padding-bottom:20px;
+		}
+		
+			/******************************************************************/
+			/* Template	/ Header / Top / Logo								  */
+			/******************************************************************/
+		
+			.template-header .template-header-top .template-header-top-logo
+			{
+				float:none;
+				padding:0px;
+			}
+
+			/******************************************************************/
+			/* Template	/ Header / Top / Icon list							  */
+			/******************************************************************/
+	
+			.template-header .template-header-top .template-header-top-icon-list
+			{
+				float:none;
+				margin:0px;
+				clear:both;
+			}
+			
+/******************************************************************************/
+/* Component																  */
+/******************************************************************************/
+			
+	/**************************************************************************/
+	/* Component / Go to top												  */
+	/**************************************************************************/
+	
+	.template-component-go-to-top
+	{
+		right:20px;
+		bottom:20px;
+	}
+}
+
+
+
+
+
+/******************************************************************************/
+/* 960-1169																	  */
+/******************************************************************************/
+
+@media only screen and (min-width:960px) and (max-width:1169px)
+{
+/******************************************************************************/
+/* Default																	  */
+/******************************************************************************/
+
+	.template-main
+	{
+		width:940px;
+	}
+	
+/******************************************************************************/
+/* Template layout															  */
+/******************************************************************************/
+
+	.template-content-layout.template-content-layout-sidebar-left .template-content-layout-column-right,
+	.template-content-layout.template-content-layout-sidebar-right .template-content-layout-column-left
+	{
+		width:530px;
+	}
+}
+
+
+
+
+
+/******************************************************************************/
+/* 768-959																	  */
+/******************************************************************************/
+
+@media only screen and (min-width:768px) and (max-width:959px)
+{
+/******************************************************************************/
+/* Default																	  */
+/******************************************************************************/
+
+	.template-main
+	{
+		width:750px;
+	}
+	
+/******************************************************************************/
+/* Headers																	  */
+/******************************************************************************/
+
+h1
+{
+	font-size:43px;
+	font-weight:900;
+}
+	
+/******************************************************************************/
+/* Template layout															  */
+/******************************************************************************/
+
+	.template-content-layout.template-content-layout-sidebar-left .template-content-layout-column-left,
+	.template-content-layout.template-content-layout-sidebar-right .template-content-layout-column-right
+	{
+		width:250px;
+	}
+	
+	.template-content-layout.template-content-layout-sidebar-left .template-content-layout-column-right,
+	.template-content-layout.template-content-layout-sidebar-right .template-content-layout-column-left
+	{
+		width:440px;
+	}
+}
+
+
+
+
+
+/******************************************************************************/
+/* 480-767																	  */
+/******************************************************************************/
+
+@media only screen and (min-width:480px) and (max-width:767px)
+{
+/******************************************************************************/
+/* Default																	  */
+/******************************************************************************/
+
+	.template-main
+	{
+		width:460px;
+	}
+	
+/******************************************************************************/
+/* Headers																	  */
+/******************************************************************************/
+
+h1
+{
+	font-size:43px;
+	font-weight:900;
+}
+
+}
+
+
+
+
+
+/******************************************************************************/
+/* 0-479																	  */
+/******************************************************************************/
+
+@media only screen and (min-width:0px) and (max-width:479px)
+{
+/******************************************************************************/
+/* Default																	  */
+/******************************************************************************/
+
+	.template-main
+	{
+		width:300px;
+	}
+	
+/******************************************************************************/
+/* Layout																	  */
+/******************************************************************************/
+	
+	/**************************************************************************/
+	/* Layout / Flex														  */
+	/**************************************************************************/
+
+	.template-layout-flex
+	{
+		
+	}
+	
+		.template-layout-flex>div
+		{
+			padding-left:20px;
+			padding-right:20px;
+		}
+	
+/******************************************************************************/
+/* Headers																	  */
+/******************************************************************************/
+
+h1
+{
+	font-size:29px;
+	font-weight:700;
+	line-height:40px;
+}
+
+h2,
+body>.template-component-search-form>form>div>input[type="search"]
+{
+	font-size:22px;
+	line-height:34px;
+}
+		
+/******************************************************************************/
+/* Template																	  */
+/******************************************************************************/
+
+	/**************************************************************************/
+	/* Template	/ Header													  */
+	/**************************************************************************/
+		
+		/**********************************************************************/
+		/* Template	/ Header / Top											  */
+		/**********************************************************************/
+		
+			/******************************************************************/
+			/* Template	/ Header / Top / Icon list							  */
+			/******************************************************************/
+
+				.template-header .template-header-top .template-header-top-icon-list .template-icon-meta-menu
+				{
+					margin-left:0px;
+				}
+		
+/******************************************************************************/
+/* Blog																	  */
+/******************************************************************************/	
+	
+	/**************************************************************************/
+	/* Blog / Header														  */
+	/**************************************************************************/
+
+	.template-blog .template-blog-header
+	{
+		display:block;
+	}
+	
+	.template-blog .template-blog-header>div
+	{
+		display:block;
+	}
+	
+	.template-blog .template-blog-header>div:first-child
+	{
+		width:100%;
+		margin-bottom:30px;
+	}
+	
+	
+		/**********************************************************************/
+		/* Blog / Header / Date												  */
+		/**********************************************************************/
+		
+		.template-blog .template-blog-header .template-blog-header-date
+		{
+			border-style:solid;
+			border-width:0px 0px 1px 0px;
+		}
+		
+			.template-blog .template-blog-header .template-blog-header-date span
+			{
+				border:none;
+				text-align:left;
+				display:inline-block;
+			}
+			
+			.template-blog .template-blog-header .template-blog-header-date span:first-child+span
+			{
+				border-style:solid;
+				border-width:0px 1px 0px 1px;
+			}
+			
+			.template-blog .template-blog-header .template-blog-header-date span:first-child
+			{
+				padding-right:20px;
+			}
+			
+			.template-blog .template-blog-header .template-blog-header-date span:first-child+span
+			{
+				padding-left:20px;
+				padding-right:20px;
+			}
+			
+			.template-blog .template-blog-header .template-blog-header-date span:first-child+span+span
+			{
+				padding-left:20px;
+			}
+			
+		/**********************************************************************/
+		/* Blog / Header / Header											  */
+		/* Blog / Header / Meta												  */
+		/**********************************************************************/
+		
+		.template-blog .template-blog-header .template-blog-header-header, 
+		.template-blog .template-blog-header .template-blog-header-meta
+		{
+			padding-left:0px;
+		}
+
+	/**************************************************************************/
+	/* Blog	/ Author Info													  */
+	/**************************************************************************/	
+	
+	.template-blog .template-blog-author-info
+	{
+		
+	}
+	
+		.template-blog .template-blog-author-info img
+		{
+			display:none;
+		}
+		
+		.template-blog .template-blog-author-info>span,
+		.template-blog .template-blog-author-info p
+		{
+			margin-left:0px;
+		}
+		
+	/**************************************************************************/
+	/* Blog	/ Comment List													  */
+	/**************************************************************************/	
+	
+					.template-blog-comment-list ul>li>div>img
+					{
+						display:none;
+					}
+	
+					.template-blog-comment-list ul>li>div>span
+					{
+						margin-left:0px;
+					}
+					
+					.template-blog-comment-list ul>li>div>a
+					{
+						float:none;
+						clear:both;
+						display:block;
+						margin-top:5px;
+					}
+					
+					.template-blog-comment-list ul>li>div>p
+					{
+						margin-left:0px;
+					}			
+}
